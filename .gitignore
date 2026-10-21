@@ -218,3 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Periscope: estado local
+reports/
+data/ai_cache/
+data/ai_sandbox/
+data/repos/
