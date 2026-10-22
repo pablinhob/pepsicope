@@ -29,6 +29,21 @@ def _repo_link(r: dict) -> str:
     return f"[{r['slug']}]({r['html_url']})" if r.get("html_url") else f"`{r['slug']}`"
 
 
+def baseline_notice(repos: int) -> list[str]:
+    """Aviso del informe de línea base, como aviso de GitHub (`> [!WARNING]`).
+
+    GitHub, la vista previa de VS Code y el HTML lo muestran destacado.
+    """
+    return [
+        "> [!WARNING]",
+        "> **Primer informe (línea base): no hay ningún informe anterior con el que comparar.**",
+        f"> Por eso recoge todo lo que existe hoy en el workspace ({repos} repositorios) y no "
+        "solo cambios. Nada de lo que aparece aquí es necesariamente nuevo ni reciente: es el "
+        "estado actual, con la historia completa de cada repo.",
+        "> A partir del próximo informe solo se mostrarán las diferencias respecto a este.",
+    ]
+
+
 class Report:
     def __init__(self, cfg: Config, changes: dict, stats: dict):
         self.cfg, self.c, self.stats = cfg, changes, stats
@@ -42,12 +57,7 @@ class Report:
         title = "Línea base" if c["baseline"] else "Cambios"
         self.w(f"# Periscope · {cfg.workspace} · {title} · {_d(c['until'])}", "")
         if c["baseline"]:
-            self.w(
-                "> **Primer informe (línea base).** Recoge todo lo que existe hoy en el "
-                "workspace; "
-                "los siguientes informes solo mostrarán diferencias respecto al anterior.",
-                "",
-            )
+            self._baseline_notice()
         else:
             self.w(f"> Periodo analizado: **{_d(c['since'])} → {_d(c['until'])}**", "")
         self._overview()
@@ -79,6 +89,9 @@ class Report:
         return "\n".join(self.lines).rstrip() + "\n"
 
     # --- secciones ----------------------------------------------------------
+    def _baseline_notice(self) -> None:
+        self.w(*baseline_notice(len(self.c["new_repos"])), "")
+
     def _overview(self) -> None:
         c = self.c
         rows = [("Repositorios en el workspace", c["repo_total"])]

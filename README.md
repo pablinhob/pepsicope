@@ -11,6 +11,12 @@ en `reports/` con lo que ha cambiado desde la ejecución anterior. Combina:
 El primer informe es la **línea base**: lista todo lo que existe. Los siguientes solo muestran
 las diferencias con el anterior.
 
+Junto a cada informe se genera su versión HTML con el mismo nombre y `.html` al final
+(`…_linea-base.md.html`). Es un único fichero que se abre en cualquier navegador sin conexión:
+no carga nada de fuera. Permite filtrar por repositorio, proyecto y lenguaje, buscar texto y
+ver solo los avisos ⚠️, y guarda los filtros en la URL (`#repo=bwidget`). Para generar el HTML
+de informes que ya existen: `./periscope.sh html` (todos) o `./periscope.sh html reports/x.md`.
+
 ## Requisitos
 
 Funciona en **macOS** y **Linux** (probado en macOS y en Debian). Hace falta:
@@ -147,6 +153,7 @@ Para controlar el coste del primer informe tienes `AI_MAX_CALLS`, `MAX_REPOS`, `
 | `upgrade [pkg]` / `outdated` / `list` / `tree` | Actualiza o inspecciona bibliotecas |
 | `export` | Genera `requirements.txt` |
 | `run [--no-ai] [--no-save] [--repo RE] [--max-repos N] [-v]` | Genera un informe |
+| `html [informe.md…]` | Genera el HTML de informes existentes (por defecto, todos los de `reports/`) |
 | `features` | Muestra qué funcionalidades están activas |
 | `reports` / `last` | Lista los informes o abre el último en VS Code |
 | `reset-state snapshots\|ai-cache\|repos\|all` | Borra estado. Si borras los snapshots, el siguiente informe vuelve a ser línea base |
@@ -178,11 +185,12 @@ src/periscope/
   analysis.py           comparación, atribución de autores, prompts a Claude
   ai.py                 llamadas a Claude Code, con caché
   report.py             render del Markdown
+  html_report.py        conversión del informe a HTML autocontenido con filtros
 data/                   estado local (no versionado)
   repos/                clones parciales (el primer run descarga, después solo lo nuevo)
   snapshots/            un JSON por ejecución (base de comparación)
   ai_cache/             respuestas de la IA
-reports/                AAAA-MM-DD_HH-MM-SS_<workspace>_<linea-base|cambios>.md
+reports/                AAAA-MM-DD_HH-MM-SS_<workspace>_<linea-base|cambios>.md (+ .md.html)
 ```
 
 ## Ejecución periódica

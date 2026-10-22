@@ -69,6 +69,7 @@ ${c_b}Bibliotecas${c_0}
 ${c_b}Aplicación${c_0}
   run [opciones]        Genera un informe (opciones: --no-ai --no-save --repo REGEX --max-repos N -v)
   features              Muestra qué funcionalidades están activas (se cambian en .env)
+  html [informe.md...]  Genera el HTML (.md.html) de informes existentes (por defecto, todos)
   reports               Lista los informes generados
   last                  Muestra la ruta del último informe (y lo abre en VS Code si 'code' existe)
   reset-state <qué>     Borra estado: snapshots | ai-cache | repos | all  (snapshots → próximo run = línea base)
@@ -176,6 +177,7 @@ case "$cmd" in
   # -------------------------------------------------------------- aplicación
   run)       need_venv; uv run periscope run "$@" ;;
   features)  need_venv; uv run periscope features ;;
+  html)      need_venv; uv run periscope html "$@" ;;
   reports)   ls -1 reports/*.md 2>/dev/null || echo "Aún no hay informes" ;;
   last)
     last="$(ls -1 reports/*.md 2>/dev/null | tail -1)"

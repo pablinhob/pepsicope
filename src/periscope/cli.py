@@ -9,12 +9,14 @@ import subprocess
 import sys
 import time
 from datetime import datetime, timedelta
+from pathlib import Path
 
 from periscope import __version__
 from periscope.ai import AI, AIError
 from periscope.analysis import Analyzer
 from periscope.bitbucket import Bitbucket, BitbucketError
 from periscope.config import FEATURES, Config, ConfigError, load_config
+from periscope.html_report import write_html
 from periscope.report import render
 from periscope.snapshot import STAMP_FORMAT, collect, latest_snapshot, save_snapshot
 
@@ -74,6 +76,7 @@ def cmd_run(cfg: Config, args: argparse.Namespace) -> int:
     suffix = "linea-base" if changes["baseline"] else "cambios"
     report_path = cfg.reports_dir / f"{stamp}_{cfg.workspace}_{suffix}.md"
     report_path.write_text(md)
+    html_path = write_html(report_path)
 
     if args.no_save:
         log.info(
@@ -83,7 +86,26 @@ def cmd_run(cfg: Config, args: argparse.Namespace) -> int:
     else:
         save_snapshot(cfg, cur, stamp)
     log.info("Informe: %s", report_path.relative_to(cfg.root))
+    log.info("Informe HTML: %s", html_path.relative_to(cfg.root))
     print(report_path)
+    return 0
+
+
+def cmd_html(cfg: Config, args: argparse.Namespace) -> int:
+    """Genera el HTML de informes Markdown ya existentes (por defecto, todos los de reports/)."""
+    if args.reports:
+        paths = [Path(p) for p in args.reports]
+    else:
+        paths = sorted(cfg.reports_dir.glob("*.md")) if cfg.reports_dir.exists() else []
+    if not paths:
+        print("No hay informes que convertir", file=sys.stderr)
+        return 1
+    missing = [p for p in paths if not p.is_file()]
+    if missing:
+        print(f"No existe: {', '.join(str(p) for p in missing)}", file=sys.stderr)
+        return 1
+    for path in paths:
+        print(write_html(path))
     return 0
 
 
@@ -235,6 +257,10 @@ def main(argv: list[str] | None = None) -> int:
     p = sub.add_parser("check", help="comprueba configuración y conectividad")
     p.add_argument("--ai", action="store_true", help="hace también una llamada de prueba a la IA")
     p.set_defaults(func=cmd_check)
+
+    p = sub.add_parser("html", help="genera el HTML de informes Markdown existentes")
+    p.add_argument("reports", nargs="*", help="informes .md (por defecto, todos los de reports/)")
+    p.set_defaults(func=cmd_html)
 
     sub.add_parser("features", help="lista las funcionalidades y su estado").set_defaults(
         func=cmd_features

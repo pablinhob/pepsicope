@@ -17,6 +17,7 @@ from periscope.ai import AI
 from periscope.analysis import Analyzer
 from periscope.config import load_config
 from periscope.gitrepo import Repo
+from periscope.html_report import render_html
 from periscope.report import render
 
 
@@ -142,6 +143,11 @@ def test_baseline_then_incremental(env):
     assert shop_info["first_commit"]["author"] == "Bea Lead"
     assert "Laravel" in shop_info["frameworks"]
     assert "Línea base" in md
+    assert "> [!WARNING]" in md and "no hay ningún informe anterior" in md
+    page = render_html(md)
+    assert '<div class="callout warning" role="note">' in page
+    assert '<article class="repo" data-filter data-repos="shop">' in page
+    assert '<tr data-filter data-repos="legacy">' in page
 
     # --- cambios: stripe + tests + docblocks + Docker + CLAUDE.md + rama nueva + borrado
     #     + repo nuevo
