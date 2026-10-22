@@ -219,8 +219,18 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# Periscope: estado local
-reports/
-data/ai_cache/
-data/ai_sandbox/
-data/repos/
+# Periscope: información privada del workspace. Nada de esto se versiona.
+# Informes generados (Markdown y HTML), estén donde estén.
+/reports/
+*.md.html
+# Estado local completo: snapshots, caché y sandbox de la IA, clones de los repos.
+/data/
+# Secretos y variantes de configuración local (solo se versiona la plantilla).
+.env
+.env.*
+!.env.example
+# Ajustes locales de Claude Code (pueden incluir rutas, permisos o datos de la sesión).
+.claude/settings.local.json
+# Trazas y volcados que pueden contener nombres de repos, autores o respuestas de la API.
+*.log
+*.jsonl
