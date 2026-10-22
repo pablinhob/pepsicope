@@ -1,0 +1,4540 @@
+{
+ "version": 1,
+ "taken_at": "2026-10-22T07:08:12+02:00",
+ "workspace": "boldest-dev",
+ "repos": {
+  "{40f35776-7840-487a-82c5-d7029e6e29ca}": {
+   "uuid": "{40f35776-7840-487a-82c5-d7029e6e29ca}",
+   "slug": "mcp-bw",
+   "name": "mcp-bw",
+   "full_name": "boldest-dev/mcp-bw",
+   "description": "",
+   "language": "python",
+   "is_private": true,
+   "project_key": "BWID",
+   "project_name": "bwidget",
+   "created_on": "2026-09-16T14:58:02.626981+00:00",
+   "updated_on": "2026-10-19T18:47:34.436738+00:00",
+   "size": 719935,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/mcp-bw",
+   "git": {
+    "ok": true,
+    "head": "4b42df99d6db88b0384866b2d8ddc4c6d8c35bd1",
+    "head_commit": {
+     "hash": "4b42df99d6db88b0384866b2d8ddc4c6d8c35bd1",
+     "author": "Jose M Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2026-10-19T20:47:26+02:00",
+     "subject": "Añadir at_route: distancia de rutas entre recursos y track KML con el route-planner de ApiTools"
+    },
+    "first_commit": {
+     "hash": "b6d176a4c9b90f4f8c70298b2badad6609ac0576",
+     "author": "Jose M. Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2026-09-16T14:58:04+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 34,
+    "branches": {
+     "BwApiV3": {
+      "hash": "5b2d80f00f09bbea6734fefafa330b0ed8c209a0",
+      "date": "2026-09-25T19:33:30+02:00",
+      "author": "Jose M Porto"
+     },
+     "main": {
+      "hash": "4b42df99d6db88b0384866b2d8ddc4c6d8c35bd1",
+      "date": "2026-10-19T20:47:26+02:00",
+      "author": "Jose M Porto"
+     },
+     "mvp-idioma-default": {
+      "hash": "786b020373a39a4f29b8b563c05d38918b7cc621",
+      "date": "2026-09-17T15:51:47+00:00",
+      "author": "Jose M. Porto"
+     }
+    }
+   },
+   "deps": {
+    "pyproject.toml": {
+     "ecosystem": "python",
+     "packages": {
+      "mcp": "==2.3.0",
+      "fastapi": ">=0.135.0",
+      "uvicorn": ">=0.44.0",
+      "redis": ">=7.0.0",
+      "jinja2": ">=3.1.0",
+      "itsdangerous": ">=2.2.0",
+      "cryptography": ">=43.0.0",
+      "pydantic": ">=2.12.0",
+      "pydantic-settings": ">=2.13.0",
+      "python-multipart": ">=0.0.24",
+      "jsonschema": ">=4.20.0",
+      "httpx2": ">=2.13.0",
+      "bandit": ">=1.8.6",
+      "black": ">=25.1.0",
+      "flake8": ">=7.3.0",
+      "isort": ">=9.0.0",
+      "mypy": ">=1.17.1",
+      "pip-audit": ">=2.10.0",
+      "pip-tools": ">=7.5.3",
+      "pylint": ">=3.3.8",
+      "pytest": ">=8.4.1",
+      "pytest-asyncio": ">=1.1.0",
+      "setuptools": ">=82.0.1"
+     }
+    }
+   },
+   "frameworks": [
+    "FastAPI",
+    "Pydantic",
+    "pytest"
+   ],
+   "services": {
+    "sdks": [
+     "Redis"
+    ],
+    "hosts": [
+     "apitools.local.boldest.io",
+     "claude.ai",
+     "claude.com",
+     "mcp.local.boldest.io"
+    ],
+    "images": []
+   },
+   "signals": {
+    "files": 96,
+    "code_files": 61,
+    "test_files": 21,
+    "ai_tooling": [
+     ".claude/agents/bw-lote.md",
+     ".claude/skills/bw-completar-fichero/SKILL.md",
+     ".claude/skills/bw-completar-fichero/completar_fichero.py",
+     "CLAUDE.md"
+    ],
+    "quality": [
+     ".flake8"
+    ],
+    "ci": [],
+    "containers": [
+     ".dockerignore"
+    ],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {
+    ".env.example": "3cad4afc9c32e3e442acd188868fa73790294edb",
+    "Makefile": "2922ba7a68f0604d07be7395bf2d9f814e709096"
+   },
+   "base_images": []
+  },
+  "{e072c8f3-54c7-4843-8a26-8cf3adf23bf2}": {
+   "uuid": "{e072c8f3-54c7-4843-8a26-8cf3adf23bf2}",
+   "slug": "frontend-admin-foundation",
+   "name": "frontend-admin-foundation",
+   "full_name": "boldest-dev/frontend-admin-foundation",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BOL2",
+   "project_name": "boldest-frontend",
+   "created_on": "2026-06-02T20:04:30.531307+00:00",
+   "updated_on": "2026-10-21T10:29:48.103087+00:00",
+   "size": 411182,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/frontend-admin-foundation",
+   "git": {
+    "ok": true,
+    "head": "e4eb8f7170ed387b088ab54504245b95c821a5b5",
+    "head_commit": {
+     "hash": "e4eb8f7170ed387b088ab54504245b95c821a5b5",
+     "author": "pepa",
+     "email": "pepaps@gmail.com",
+     "date": "2026-10-21T09:16:46+02:00",
+     "subject": "recovering map value - test"
+    },
+    "first_commit": {
+     "hash": "802f1ccf88aa1f092f211224b114083b4f55aa62",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2026-06-02T20:04:31+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 53,
+    "branches": {
+     "general-refactoring-forms": {
+      "hash": "9bb6f75b290538270985a9a6894ad2236b81afad",
+      "date": "2026-09-30T11:41:07+02:00",
+      "author": "Pablo Blanco"
+     },
+     "main": {
+      "hash": "e4eb8f7170ed387b088ab54504245b95c821a5b5",
+      "date": "2026-10-21T09:16:46+02:00",
+      "author": "pepa"
+     },
+     "mapsSection": {
+      "hash": "cbffceb44b60625f95ff252f8255fdf591523e04",
+      "date": "2026-09-30T15:42:58+02:00",
+      "author": "pepa"
+     },
+     "production": {
+      "hash": "8fbedb54cab968fc760ee71d142b4cb64990c8fb",
+      "date": "2026-10-21T10:29:45+00:00",
+      "author": "pepa p. sañudo"
+     }
+    }
+   },
+   "deps": {
+    "package.json": {
+     "ecosystem": "npm",
+     "packages": {}
+    }
+   },
+   "frameworks": [],
+   "services": {
+    "sdks": [],
+    "hosts": [],
+    "images": []
+   },
+   "signals": {
+    "files": 25,
+    "code_files": 21,
+    "test_files": 0,
+    "ai_tooling": [],
+    "quality": [],
+    "ci": [
+     "bitbucket-pipelines.yml"
+    ],
+    "containers": [],
+    "iac": [],
+    "docblocks": 2,
+    "typed_docblocks": 1
+   },
+   "config": {
+    "bitbucket-pipelines.yml": "1f069c5083c39b72d3b2af4ce7ef3f77dc9459ef"
+   },
+   "base_images": []
+  },
+  "{46e9b5a0-4102-433c-b2ba-54f164dc9dc9}": {
+   "uuid": "{46e9b5a0-4102-433c-b2ba-54f164dc9dc9}",
+   "slug": "frontend-admin-analytics",
+   "name": "frontend-admin-analytics",
+   "full_name": "boldest-dev/frontend-admin-analytics",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BOL2",
+   "project_name": "boldest-frontend",
+   "created_on": "2026-06-02T20:45:03.572438+00:00",
+   "updated_on": "2026-10-06T12:03:59.057581+00:00",
+   "size": 496330,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/frontend-admin-analytics",
+   "git": {
+    "ok": true,
+    "head": "be047bd046629287cf21c6640d2925dfe3f83779",
+    "head_commit": {
+     "hash": "be047bd046629287cf21c6640d2925dfe3f83779",
+     "author": "manueljpy",
+     "email": "manueljpy@gmail.com",
+     "date": "2026-09-16T11:10:58+00:00",
+     "subject": "Merged in feat/new-kpis-and-topics (pull request #18)"
+    },
+    "first_commit": {
+     "hash": "11450a1782dd6b7011cdc90303e7a84f176ad973",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2026-06-02T20:45:05+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 64,
+    "branches": {
+     "main": {
+      "hash": "be047bd046629287cf21c6640d2925dfe3f83779",
+      "date": "2026-09-16T11:10:58+00:00",
+      "author": "manueljpy"
+     },
+     "production": {
+      "hash": "9237ee4a735b83293e70faff57ed2c0fc9bd4232",
+      "date": "2026-10-06T12:03:56+00:00",
+      "author": "Jose M. Porto"
+     }
+    }
+   },
+   "deps": {
+    "package.json": {
+     "ecosystem": "npm",
+     "packages": {}
+    }
+   },
+   "frameworks": [],
+   "services": {
+    "sdks": [],
+    "hosts": [],
+    "images": []
+   },
+   "signals": {
+    "files": 25,
+    "code_files": 19,
+    "test_files": 0,
+    "ai_tooling": [],
+    "quality": [],
+    "ci": [
+     "bitbucket-pipelines.yml"
+    ],
+    "containers": [],
+    "iac": [],
+    "docblocks": 19,
+    "typed_docblocks": 64
+   },
+   "config": {
+    "bitbucket-pipelines.yml": "fe30e3096e73108b81f429515a41e2a15de021ca"
+   },
+   "base_images": []
+  },
+  "{55461235-ed2c-45bb-98d4-422ebe162945}": {
+   "uuid": "{55461235-ed2c-45bb-98d4-422ebe162945}",
+   "slug": "frontend-admin-mapcraft",
+   "name": "frontend-admin-mapcraft",
+   "full_name": "boldest-dev/frontend-admin-mapcraft",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BOL2",
+   "project_name": "boldest-frontend",
+   "created_on": "2026-06-02T20:47:51.605338+00:00",
+   "updated_on": "2026-10-21T10:34:08.022402+00:00",
+   "size": 731045,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/frontend-admin-mapcraft",
+   "git": {
+    "ok": true,
+    "head": "65ea2ec3e56ef1a9417ef8aa86717df379303f2c",
+    "head_commit": {
+     "hash": "65ea2ec3e56ef1a9417ef8aa86717df379303f2c",
+     "author": "manueljpy",
+     "email": "manueljpy@gmail.com",
+     "date": "2026-10-21T10:34:03+00:00",
+     "subject": "Merged in fix/remove-duplicate-code-reducer (pull request #13)"
+    },
+    "first_commit": {
+     "hash": "37dfb83d51ee8671c3b9a15424bcacb90799adcf",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2026-06-02T20:47:52+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 45,
+    "branches": {
+     "main": {
+      "hash": "65ea2ec3e56ef1a9417ef8aa86717df379303f2c",
+      "date": "2026-10-21T10:34:03+00:00",
+      "author": "manueljpy"
+     },
+     "production": {
+      "hash": "3ccc31b9ad03b6ee7d4a5eb70b71a4a9fb35ca0c",
+      "date": "2026-08-24T12:54:15+00:00",
+      "author": "Jose M. Porto"
+     }
+    }
+   },
+   "deps": {
+    "package.json": {
+     "ecosystem": "npm",
+     "packages": {}
+    }
+   },
+   "frameworks": [],
+   "services": {
+    "sdks": [],
+    "hosts": [],
+    "images": []
+   },
+   "signals": {
+    "files": 53,
+    "code_files": 43,
+    "test_files": 0,
+    "ai_tooling": [],
+    "quality": [],
+    "ci": [
+     "bitbucket-pipelines.yml"
+    ],
+    "containers": [],
+    "iac": [],
+    "docblocks": 26,
+    "typed_docblocks": 49
+   },
+   "config": {
+    "bitbucket-pipelines.yml": "1684b8bdb363239f5ed3e00310198a124943164a"
+   },
+   "base_images": []
+  },
+  "{35f58a99-8eab-4053-9c54-8695427f5e0f}": {
+   "uuid": "{35f58a99-8eab-4053-9c54-8695427f5e0f}",
+   "slug": "frontend-admin",
+   "name": "frontend-admin",
+   "full_name": "boldest-dev/frontend-admin",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BOL2",
+   "project_name": "boldest-frontend",
+   "created_on": "2026-05-29T03:39:00.027661+00:00",
+   "updated_on": "2026-10-21T09:42:43.075254+00:00",
+   "size": 4458032,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/frontend-admin",
+   "git": {
+    "ok": true,
+    "head": "65cc8378e4061521bbb9e4b948b6f7e8b10cb2a6",
+    "head_commit": {
+     "hash": "65cc8378e4061521bbb9e4b948b6f7e8b10cb2a6",
+     "author": "pepa",
+     "email": "pepaps@gmail.com",
+     "date": "2026-10-21T11:42:32+02:00",
+     "subject": "maps bug"
+    },
+    "first_commit": {
+     "hash": "7cb6ad34a5b1c3e1e6afe92bcde7276cbd01a5b9",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2026-05-29T03:39:01+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 115,
+    "branches": {
+     "docker-updates": {
+      "hash": "dfa87cd43ac452bc3d2663004e5920b3054d9c31",
+      "date": "2026-08-28T16:21:09+02:00",
+      "author": "Jose M Porto"
+     },
+     "fix/dependences": {
+      "hash": "d7cda198de7acc845596fab922af7662efcb4bd3",
+      "date": "2026-08-27T12:09:54+02:00",
+      "author": "Pablo Blanco"
+     },
+     "fixingPropBase": {
+      "hash": "1be22e55244a60e0149af60de807ded27538b175",
+      "date": "2026-08-18T15:31:21+00:00",
+      "author": "pepa p. sañudo"
+     },
+     "fontsUnification": {
+      "hash": "f436c827bb786d9bed36f3a3e738b85e759f08c2",
+      "date": "2026-06-19T12:24:52+02:00",
+      "author": "pepa"
+     },
+     "general-refactoring": {
+      "hash": "ce8f684ab964cc6a371f449d07daa8fcfe28fc3b",
+      "date": "2026-09-29T18:12:02+02:00",
+      "author": "Pablo Blanco"
+     },
+     "main": {
+      "hash": "65cc8378e4061521bbb9e4b948b6f7e8b10cb2a6",
+      "date": "2026-10-21T11:42:32+02:00",
+      "author": "pepa"
+     },
+     "mapsSection": {
+      "hash": "d697e8ece0009ac26eb15febbc7665fed7a4c835",
+      "date": "2026-09-30T19:01:36+02:00",
+      "author": "pepa"
+     },
+     "newFields": {
+      "hash": "4fdd30755bc2c29087b78966280cec7d35cc6c30",
+      "date": "2026-06-23T18:19:45+02:00",
+      "author": "pepa"
+     },
+     "production": {
+      "hash": "0548269a0ec269b7018b0959133a2b947b78614a",
+      "date": "2026-10-05T08:30:35+00:00",
+      "author": "pepa p. sañudo"
+     },
+     "review/main-integration": {
+      "hash": "64607e61965fb880e5771ea9dd7977811e5fef9c",
+      "date": "2026-06-23T07:37:26+02:00",
+      "author": "pepa"
+     }
+    }
+   },
+   "deps": {
+    "app/package.json": {
+     "ecosystem": "npm",
+     "packages": {
+      "@date-io/dayjs": "^3.2.0",
+      "@dnd-kit/core": "^6.3.1",
+      "@dnd-kit/sortable": "^10.0.0",
+      "@dnd-kit/utilities": "^3.2.2",
+      "@emotion/react": "^11.14.0",
+      "@emotion/styled": "^11.14.0",
+      "@hello-pangea/dnd": "^18.0.1",
+      "@lexical/react": "^0.29.0",
+      "@mui/icons-material": "^6.4.7",
+      "@mui/lab": "^6.0.0-beta.30",
+      "@mui/material": "^6.4.10",
+      "@mui/x-date-pickers": "^7.27.3",
+      "@reduxjs/toolkit": "^2.5.1",
+      "@tinymce/tinymce-react": "^6.1.0",
+      "@vis.gl/react-google-maps": "^1.5.3",
+      "@vitejs/plugin-react-swc": "^3.8.1",
+      "axios": "^1.7.9",
+      "browser-image-compression": "^2.0.2",
+      "chart.js": "^4.4.0",
+      "dayjs": "^1.11.13",
+      "exceljs": "^4.4.0",
+      "formik": "^2.4.6",
+      "fuse.js": "^7.1.0",
+      "gettext-parser": "^8.0.0",
+      "gettext.js": "^2.0.3",
+      "i18next-conv": "^15.1.1",
+      "jed": "^1.1.1",
+      "json-schema-to-yup": "^1.8.8",
+      "md5": "^2.3.0",
+      "react": "^18.2.0",
+      "react-chartjs-2": "^5.2.0",
+      "react-dom": "^18.2.0",
+      "react-redux": "^9.2.0",
+      "react-router-dom": "^7.11.0",
+      "react-select": "^5.10.1",
+      "recharts": "^2.15.1",
+      "styled-components": "^6.1.15",
+      "uuid": "^11.1.0",
+      "yup": "^1.6.1",
+      "@eslint/js": "^9.20.0 (dev)",
+      "eslint": "^9.20.1 (dev)",
+      "eslint-plugin-react": "^7.37.4 (dev)",
+      "globals": "^15.15.0 (dev)",
+      "jsdom": "^26.0.0 (dev)",
+      "po2json": "^1.0.0-beta-3 (dev)",
+      "sass-embedded": "^1.85.0 (dev)",
+      "typescript-eslint": "^8.24.1 (dev)",
+      "vite": "^6.1.0 (dev)",
+      "vitest": "^3.0.6 (dev)"
+     }
+    }
+   },
+   "frameworks": [
+    "Material UI",
+    "React",
+    "Redux Toolkit",
+    "Vite",
+    "Vitest"
+   ],
+   "services": {
+    "sdks": [
+     "Google Maps"
+    ],
+    "hosts": [
+     "ai.bw.boldest.io",
+     "apitools.boldest.io",
+     "apitools.dev.boldest.io",
+     "www.tee-travel.com"
+    ],
+    "images": []
+   },
+   "signals": {
+    "files": 155,
+    "code_files": 61,
+    "test_files": 1,
+    "ai_tooling": [],
+    "quality": [
+     "app/eslint.config.js"
+    ],
+    "ci": [
+     "bitbucket-pipelines.yml"
+    ],
+    "containers": [],
+    "iac": [],
+    "docblocks": 1,
+    "typed_docblocks": 1
+   },
+   "config": {
+    ".env.example": "c634cc2006799d21394ce2ab793f75f7a3591a2e",
+    "app/vite.config.js": "dd5c0adfeb997c2839a1acb27cd613d1e5593690",
+    "bitbucket-pipelines.yml": "462c707c508979da606fe403225ea8e6382bbd31"
+   },
+   "base_images": []
+  },
+  "{777ad410-fe00-40d2-aab1-f11186919d16}": {
+   "uuid": "{777ad410-fe00-40d2-aab1-f11186919d16}",
+   "slug": "frontend-public-favorites-and-planner",
+   "name": "frontend-public-favorites-and-planner",
+   "full_name": "boldest-dev/frontend-public-favorites-and-planner",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BOL2",
+   "project_name": "boldest-frontend",
+   "created_on": "2026-04-14T15:24:49.742542+00:00",
+   "updated_on": "2026-07-13T13:17:45.828718+00:00",
+   "size": 52407,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/frontend-public-favorites-and-planner",
+   "git": {
+    "ok": true,
+    "head": "2a4879cadacaae85e865f1dbd657251b59916beb",
+    "head_commit": {
+     "hash": "2a4879cadacaae85e865f1dbd657251b59916beb",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2026-07-13T15:17:40+02:00",
+     "subject": "Use compile.production.env for production branch builds"
+    },
+    "first_commit": {
+     "hash": "91c72de946d0a6fa4a9193c4a115a9ee81bc2c60",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2026-04-14T15:24:50+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 6,
+    "branches": {
+     "main": {
+      "hash": "2a4879cadacaae85e865f1dbd657251b59916beb",
+      "date": "2026-07-13T15:17:40+02:00",
+      "author": "Pablo Blanco"
+     },
+     "production": {
+      "hash": "f153cc87f959afe916369b776fe775467f48dc2e",
+      "date": "2026-07-13T12:50:36+02:00",
+      "author": "Pablo Blanco"
+     }
+    }
+   },
+   "deps": {
+    "package.json": {
+     "ecosystem": "npm",
+     "packages": {
+      "react": "^18.2.0 (peer)",
+      "react-dom": "^18.2.0 (peer)",
+      "react-redux": "^9.2.0 (peer)",
+      "@reduxjs/toolkit": "^2.5.1 (peer)",
+      "react-router-dom": "^7.1.5 (peer)"
+     }
+    }
+   },
+   "frameworks": [
+    "React",
+    "Redux Toolkit"
+   ],
+   "services": {
+    "sdks": [],
+    "hosts": [],
+    "images": []
+   },
+   "signals": {
+    "files": 26,
+    "code_files": 18,
+    "test_files": 0,
+    "ai_tooling": [],
+    "quality": [],
+    "ci": [
+     "bitbucket-pipelines.yml"
+    ],
+    "containers": [],
+    "iac": [],
+    "docblocks": 4,
+    "typed_docblocks": 4
+   },
+   "config": {
+    "bitbucket-pipelines.yml": "c73b834cf865255218613197bd3b1674a9cdf7fa"
+   },
+   "base_images": []
+  },
+  "{2ebbe8e6-c344-4fc4-b160-f0c201a95cae}": {
+   "uuid": "{2ebbe8e6-c344-4fc4-b160-f0c201a95cae}",
+   "slug": "frontend-public-sections",
+   "name": "frontend-public-sections",
+   "full_name": "boldest-dev/frontend-public-sections",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BOL2",
+   "project_name": "boldest-frontend",
+   "created_on": "2026-04-14T15:22:32.622568+00:00",
+   "updated_on": "2026-09-08T15:36:23.831615+00:00",
+   "size": 144013,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/frontend-public-sections",
+   "git": {
+    "ok": true,
+    "head": "c5e81cdf03049b7aad05d45ce2b3fa228568a5c3",
+    "head_commit": {
+     "hash": "c5e81cdf03049b7aad05d45ce2b3fa228568a5c3",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2026-09-08T17:35:55+02:00",
+     "subject": "header"
+    },
+    "first_commit": {
+     "hash": "1dfd28dbf2d25ae7062f92f4bab54f604bccd2a6",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2026-04-14T15:22:33+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 16,
+    "branches": {
+     "main": {
+      "hash": "c5e81cdf03049b7aad05d45ce2b3fa228568a5c3",
+      "date": "2026-09-08T17:35:55+02:00",
+      "author": "Pablo Blanco"
+     },
+     "production": {
+      "hash": "2bec5201025fd728be703a0218d16e890aecebf1",
+      "date": "2026-07-13T12:50:34+02:00",
+      "author": "Pablo Blanco"
+     }
+    }
+   },
+   "deps": {
+    "package.json": {
+     "ecosystem": "npm",
+     "packages": {
+      "react": "^18.2.0 (peer)",
+      "react-dom": "^18.2.0 (peer)",
+      "react-redux": "^9.2.0 (peer)",
+      "@reduxjs/toolkit": "^2.5.1 (peer)"
+     }
+    }
+   },
+   "frameworks": [
+    "React",
+    "Redux Toolkit"
+   ],
+   "services": {
+    "sdks": [],
+    "hosts": [
+     "api.open-meteo.com",
+     "www.lavozdegalicia.es"
+    ],
+    "images": []
+   },
+   "signals": {
+    "files": 65,
+    "code_files": 36,
+    "test_files": 0,
+    "ai_tooling": [],
+    "quality": [],
+    "ci": [
+     "bitbucket-pipelines.yml"
+    ],
+    "containers": [],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {
+    "bitbucket-pipelines.yml": "e45f00783c8bb9ecb4d6ba686698d7752da3af84"
+   },
+   "base_images": []
+  },
+  "{e762bb91-d0a4-4a6d-a5ce-b8ae6e39025d}": {
+   "uuid": "{e762bb91-d0a4-4a6d-a5ce-b8ae6e39025d}",
+   "slug": "frontend-public-bw-map",
+   "name": "frontend-public-bw-map",
+   "full_name": "boldest-dev/frontend-public-bw-map",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BOL2",
+   "project_name": "boldest-frontend",
+   "created_on": "2026-04-14T15:24:21.674481+00:00",
+   "updated_on": "2026-10-01T20:31:03.324514+00:00",
+   "size": 497936,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/frontend-public-bw-map",
+   "git": {
+    "ok": true,
+    "head": "3dedf887d001f3ba1e1769de5178329dad9581dc",
+    "head_commit": {
+     "hash": "3dedf887d001f3ba1e1769de5178329dad9581dc",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2026-09-09T11:32:40+02:00",
+     "subject": "mapbox instance explorer"
+    },
+    "first_commit": {
+     "hash": "382ca99c7d85b25d98a3822deb5bcf1dcc974b9b",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2026-04-14T15:24:23+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 69,
+    "branches": {
+     "feature/map_agnostic_integration": {
+      "hash": "87bc99c026b9239a5d0b332cd2a8dc8bbfedc382",
+      "date": "2026-10-01T22:30:58+02:00",
+      "author": "Pablo Blanco"
+     },
+     "main": {
+      "hash": "3dedf887d001f3ba1e1769de5178329dad9581dc",
+      "date": "2026-09-09T11:32:40+02:00",
+      "author": "Pablo Blanco"
+     },
+     "production": {
+      "hash": "e642eafdb97060ee07d108c459243697b9ee51c4",
+      "date": "2026-07-13T12:50:35+02:00",
+      "author": "Pablo Blanco"
+     }
+    }
+   },
+   "deps": {
+    "package.json": {
+     "ecosystem": "npm",
+     "packages": {
+      "@mapbox/mapbox-gl-geocoder": "^5.0.2",
+      "react": "^18.2.0 (peer)",
+      "react-dom": "^18.2.0 (peer)",
+      "react-redux": "^9.2.0 (peer)",
+      "@reduxjs/toolkit": "^2.5.1 (peer)",
+      "react-router-dom": "^7.1.5 (peer)",
+      "mapbox-gl": "^2.6.1 (peer)"
+     }
+    }
+   },
+   "frameworks": [
+    "React",
+    "Redux Toolkit"
+   ],
+   "services": {
+    "sdks": [
+     "Mapbox"
+    ],
+    "hosts": [
+     "es.wikiloc.com",
+     "maps.googleapis.com",
+     "opentopomap.org",
+     "server.arcgisonline.com",
+     "tile.opentopomap.org",
+     "tiles.openfreemap.org",
+     "www.aranga.es",
+     "www.openstreetmap.org"
+    ],
+    "images": []
+   },
+   "signals": {
+    "files": 79,
+    "code_files": 57,
+    "test_files": 0,
+    "ai_tooling": [],
+    "quality": [],
+    "ci": [
+     "bitbucket-pipelines.yml"
+    ],
+    "containers": [],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {
+    "bitbucket-pipelines.yml": "5b029ae82392bf03311499fbfc8ecad0753553f3"
+   },
+   "base_images": []
+  },
+  "{d6b0b4b5-ff0d-41b3-b3dc-f1fa9ccbfc5b}": {
+   "uuid": "{d6b0b4b5-ff0d-41b3-b3dc-f1fa9ccbfc5b}",
+   "slug": "frontend-public",
+   "name": "frontend-public",
+   "full_name": "boldest-dev/frontend-public",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BOL2",
+   "project_name": "boldest-frontend",
+   "created_on": "2026-04-14T10:35:41.957947+00:00",
+   "updated_on": "2026-10-21T14:07:51.984582+00:00",
+   "size": 11254042,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/frontend-public",
+   "git": {
+    "ok": true,
+    "head": "f1eba0083d293554702fd3fbc7a9f51775294848",
+    "head_commit": {
+     "hash": "f1eba0083d293554702fd3fbc7a9f51775294848",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2026-10-01T22:30:21+02:00",
+     "subject": "agnosticmapcanvas"
+    },
+    "first_commit": {
+     "hash": "bdbd145ff6e9ad8e4866ed41c59e1e8ee0074781",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2026-04-14T10:35:43+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 95,
+    "branches": {
+     "feat/add-icons-drag-&-drop-package-and-update-favorites-storage-for-embeds-migration": {
+      "hash": "c9949583590f2f3eb53929c1dae7bfaa8acfdb4b",
+      "date": "2026-10-21T16:06:34+02:00",
+      "author": "Manuel Jiménez"
+     },
+     "feat/agnostic_map": {
+      "hash": "fae2108ac7bc803f4325a33a9914d565e72cb300",
+      "date": "2026-06-25T03:18:29+02:00",
+      "author": "Pablo Blanco"
+     },
+     "fix/dependences": {
+      "hash": "3bb148d5035cc327531d532d8b0b92319c2bb27b",
+      "date": "2026-07-29T23:44:03+02:00",
+      "author": "Pablo Blanco"
+     },
+     "fix/setlang-bug": {
+      "hash": "f1832abff644d3c3eec6b2b01ef91eda8645a63d",
+      "date": "2026-07-14T11:46:42+02:00",
+      "author": "Pablo Blanco"
+     },
+     "main": {
+      "hash": "f1eba0083d293554702fd3fbc7a9f51775294848",
+      "date": "2026-10-01T22:30:21+02:00",
+      "author": "Pablo Blanco"
+     },
+     "production": {
+      "hash": "dab90eb6b4baf11f844650e4e9c94d037fb143c7",
+      "date": "2026-07-13T12:50:26+02:00",
+      "author": "Pablo Blanco"
+     }
+    }
+   },
+   "deps": {
+    "app/package.json": {
+     "ecosystem": "npm",
+     "packages": {
+      "@deck.gl/core": "^9.3.4",
+      "@deck.gl/google-maps": "^9.3.4",
+      "@deck.gl/layers": "^9.3.4",
+      "@deck.gl/mapbox": "^9.3.4",
+      "@emotion/react": "^11.14.0",
+      "@hello-pangea/dnd": "^18.0.1",
+      "@lexical/react": "^0.29.0",
+      "@reduxjs/toolkit": "^2.5.1",
+      "@tinymce/tinymce-react": "^6.1.0",
+      "@vitejs/plugin-react-swc": "^3.8.1",
+      "axios": "^1.7.9",
+      "gettext-parser": "^8.0.0",
+      "gettext.js": "^2.0.3",
+      "i18next-conv": "^15.1.1",
+      "jed": "^1.1.1",
+      "mapbox-gl": "^2.6.1",
+      "maplibre-gl": "^5.24.0",
+      "nouislider": "^15.8.1",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-redux": "^9.2.0",
+      "react-rnd": "^10.5.2",
+      "react-select": "^5.10.1",
+      "react-to-webcomponent": "^2.0.1",
+      "recharts": "^2.15.1",
+      "supercluster": "^8.0.1",
+      "swiper": "^12.0.3",
+      "three": "^0.160.0",
+      "@eslint/js": "^9.20.0 (dev)",
+      "eslint": "^9.20.1 (dev)",
+      "eslint-plugin-react": "^7.37.4 (dev)",
+      "globals": "^15.15.0 (dev)",
+      "javascript-obfuscator": "^4.1.1 (dev)",
+      "jsdom": "^26.0.0 (dev)",
+      "po2json": "^1.0.0-beta-3 (dev)",
+      "sass-embedded": "^1.85.0 (dev)",
+      "typescript-eslint": "^8.24.1 (dev)",
+      "vite": "^6.1.0 (dev)",
+      "vite-plugin-svgr": "^4.5.0 (dev)",
+      "vitest": "^3.0.6 (dev)"
+     }
+    }
+   },
+   "frameworks": [
+    "React",
+    "Redux Toolkit",
+    "Three.js",
+    "Vite",
+    "Vitest"
+   ],
+   "services": {
+    "sdks": [
+     "Google Maps",
+     "Mapbox"
+    ],
+    "hosts": [
+     "admin.ai.bw.boldest.io",
+     "ai.bw.boldest.io",
+     "apitools.boldest.io",
+     "apitools.dev.boldest.io",
+     "developers.google.com",
+     "embed.boldest.io",
+     "www.google.com"
+    ],
+    "images": []
+   },
+   "signals": {
+    "files": 348,
+    "code_files": 58,
+    "test_files": 1,
+    "ai_tooling": [],
+    "quality": [
+     "app/eslint.config.js"
+    ],
+    "ci": [
+     "bitbucket-pipelines.yml"
+    ],
+    "containers": [],
+    "iac": [],
+    "docblocks": 14,
+    "typed_docblocks": 28
+   },
+   "config": {
+    ".env.example": "567837e744b14828399a9589051f4588b2759b39",
+    "app/vite.config.js": "f125455f7628691059aed34bead0293c3f0be591",
+    "bitbucket-pipelines.yml": "1b4ab490e72683a0435098d72862332c85ca2495"
+   },
+   "base_images": []
+  },
+  "{2e56583c-2902-4f7f-a90d-c59cdd22dd69}": {
+   "uuid": "{2e56583c-2902-4f7f-a90d-c59cdd22dd69}",
+   "slug": "observer-api",
+   "name": "observer-api",
+   "full_name": "boldest-dev/observer-api",
+   "description": "",
+   "language": "python",
+   "is_private": true,
+   "project_key": "BOL",
+   "project_name": "boldest",
+   "created_on": "2026-01-14T16:33:27.061596+00:00",
+   "updated_on": "2026-06-04T13:47:36.593031+00:00",
+   "size": 639131,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/observer-api",
+   "git": {
+    "ok": true,
+    "head": "5adbf3292cc92527fbae62dfa0ab7272dba80bfd",
+    "head_commit": {
+     "hash": "5adbf3292cc92527fbae62dfa0ab7272dba80bfd",
+     "author": "Jose M Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2026-06-04T15:47:22+02:00",
+     "subject": "Subir limetes a consultas"
+    },
+    "first_commit": {
+     "hash": "b4029111dda25f7ed59c177c3f92600864d14a51",
+     "author": "Jose M. Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2026-01-14T16:33:28+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 56,
+    "branches": {
+     "main": {
+      "hash": "5adbf3292cc92527fbae62dfa0ab7272dba80bfd",
+      "date": "2026-06-04T15:47:22+02:00",
+      "author": "Jose M Porto"
+     }
+    }
+   },
+   "deps": {
+    "app/requirements.txt": {
+     "ecosystem": "python",
+     "packages": {
+      "fastapi": "==0.135.3",
+      "httpx": ">=0.28.1",
+      "pydantic": "==2.13.0",
+      "pydantic-settings": "==2.13.1",
+      "pytest": "==9.0.3",
+      "python-dotenv": "==1.2.2"
+     }
+    }
+   },
+   "frameworks": [
+    "FastAPI",
+    "Pydantic",
+    "pytest"
+   ],
+   "services": {
+    "sdks": [],
+    "hosts": [
+     "osv-api.boldest.io",
+     "osv.boldest.io"
+    ],
+    "images": []
+   },
+   "signals": {
+    "files": 75,
+    "code_files": 26,
+    "test_files": 10,
+    "ai_tooling": [
+     ".claude/.gitignore",
+     ".claude/agents/security-reviewer.md",
+     ".claude/settings.json",
+     ".claude/skills/fastapi",
+     ".claude/skills/query-debug/SKILL.md",
+     ".claude/skills/test-api/SKILL.md",
+     "CLAUDE.md"
+    ],
+    "quality": [],
+    "ci": [],
+    "containers": [
+     ".devcontainer/devcontainer.json",
+     "docker-compose.yml"
+    ],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {
+    "app/.env.example": "f0e783c3c0aa8150641da67e3690829cbc1ff5aa",
+    "docker-compose.yml": "a90b1608fc3519eec649218b08b8b5e308a80194"
+   },
+   "base_images": []
+  },
+  "{42009ffc-d9d8-48dd-9820-180b1cf51c7d}": {
+   "uuid": "{42009ffc-d9d8-48dd-9820-180b1cf51c7d}",
+   "slug": "boldest-frontend-embed",
+   "name": "boldest-frontend-embed",
+   "full_name": "boldest-dev/boldest-frontend-embed",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BOL",
+   "project_name": "boldest",
+   "created_on": "2026-01-27T07:25:23.835356+00:00",
+   "updated_on": "2026-10-20T16:22:14.237393+00:00",
+   "size": 3410684,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/boldest-frontend-embed",
+   "git": {
+    "ok": true,
+    "head": "01fd648590e67f7ae026555e4fc4b8b7294395cd",
+    "head_commit": {
+     "hash": "01fd648590e67f7ae026555e4fc4b8b7294395cd",
+     "author": "manueljpy",
+     "email": "manueljpy@gmail.com",
+     "date": "2026-10-20T16:22:09+00:00",
+     "subject": "Merged in fix/activate-planner-day-on-any-action (pull request #56)"
+    },
+    "first_commit": {
+     "hash": "b8c2563ff4a65cd274e31b77f7a18893a1d8cbf7",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2026-01-27T07:25:25+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 334,
+    "branches": {
+     "feat/share-favorites-and-planner-callback": {
+      "hash": "3c019f599f0c791a6e64908a98432575a0096e4f",
+      "date": "2026-09-02T17:39:38+02:00",
+      "author": "Manuel Jiménez"
+     },
+     "feature/attributes-manager": {
+      "hash": "57667f67f74127f74a969ca5eac48a73ca6ba53d",
+      "date": "2026-04-13T18:23:43+02:00",
+      "author": "Pablo Blanco"
+     },
+     "feature/fav-count": {
+      "hash": "289df66ffb5059ef626749b4178a119d98d7d45e",
+      "date": "2026-03-26T02:55:24+01:00",
+      "author": "Pablo Blanco"
+     },
+     "feature/js-parameters": {
+      "hash": "535483ae2b077010057e8713d8447ef6e297546e",
+      "date": "2026-04-10T17:10:53+02:00",
+      "author": "Pablo Blanco"
+     },
+     "feature/resource-click-callback": {
+      "hash": "cd3e1c9851d1f6f28388ab10cdeba2c59b93c86c",
+      "date": "2026-03-31T01:40:34+02:00",
+      "author": "Pablo Blanco"
+     },
+     "feature/resources-api": {
+      "hash": "d75c071b394c7c1737a6b1538b5c44bfc513af2f",
+      "date": "2026-02-26T18:06:37+01:00",
+      "author": "Manuel Jiménez"
+     },
+     "fix/attributes-uniform": {
+      "hash": "44ccb146ada0f8f5370398a46202aed094fa273b",
+      "date": "2026-04-13T12:44:30+02:00",
+      "author": "Pablo Blanco"
+     },
+     "fix/embed": {
+      "hash": "202de43cabbe70ba24130b9be1d339269798e98c",
+      "date": "2026-03-26T20:59:44+01:00",
+      "author": "Pablo Blanco"
+     },
+     "fix/locales": {
+      "hash": "53ba0dbc5f9b8b1749d1aacc0c37d714348b1813",
+      "date": "2026-04-30T15:01:21+02:00",
+      "author": "Pablo Blanco"
+     },
+     "fix/new-embeds-working": {
+      "hash": "73cf3e255e948c53571b7f7137154a076d21a465",
+      "date": "2026-03-25T23:52:55+01:00",
+      "author": "Pablo Blanco"
+     },
+     "fix/url-hash-read": {
+      "hash": "6dc39eaecc3378f7d1221a26b255cff21793f0a7",
+      "date": "2026-09-16T18:08:39+02:00",
+      "author": "Pablo Blanco"
+     },
+     "fix/url_read": {
+      "hash": "a9142b4b723741ed3581df8a642255c33932bbdd",
+      "date": "2026-09-14T16:46:28+02:00",
+      "author": "Pablo Blanco"
+     },
+     "main": {
+      "hash": "01fd648590e67f7ae026555e4fc4b8b7294395cd",
+      "date": "2026-10-20T16:22:09+00:00",
+      "author": "manueljpy"
+     }
+    }
+   },
+   "deps": {
+    "app/package.json": {
+     "ecosystem": "npm",
+     "packages": {
+      "@dnd-kit/core": "^6.3.1",
+      "@dnd-kit/sortable": "^10.0.0",
+      "@dnd-kit/utilities": "^3.2.2",
+      "@emotion/react": "^11.14.0",
+      "@hello-pangea/dnd": "^18.0.1",
+      "@lexical/react": "^0.29.0",
+      "@reduxjs/toolkit": "^2.5.1",
+      "@tinymce/tinymce-react": "^6.1.0",
+      "@vitejs/plugin-react-swc": "^3.8.1",
+      "axios": "^1.7.9",
+      "gettext-parser": "^8.0.0",
+      "gettext.js": "^2.0.3",
+      "i18next-conv": "^15.1.1",
+      "jed": "^1.1.1",
+      "mapbox-gl": "^2.6.1",
+      "nouislider": "^15.8.1",
+      "npm": "^11.1.0",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-redux": "^9.2.0",
+      "react-rnd": "^10.5.2",
+      "react-router-dom": "^7.1.5",
+      "react-select": "^5.10.1",
+      "react-to-webcomponent": "^2.0.1",
+      "recharts": "^2.15.1",
+      "swiper": "^12.0.3",
+      "@eslint/js": "^9.20.0 (dev)",
+      "eslint": "^9.20.1 (dev)",
+      "eslint-plugin-react": "^7.37.4 (dev)",
+      "globals": "^15.15.0 (dev)",
+      "javascript-obfuscator": "^4.1.1 (dev)",
+      "jsdom": "^26.0.0 (dev)",
+      "po2json": "^1.0.0-beta-3 (dev)",
+      "rollup-plugin-javascript-obfuscator": "^1.0.4 (dev)",
+      "sass-embedded": "^1.85.0 (dev)",
+      "typescript-eslint": "^8.24.1 (dev)",
+      "vite": "^6.1.0 (dev)",
+      "vite-plugin-svgr": "^4.5.0 (dev)",
+      "vitest": "^3.0.6 (dev)"
+     }
+    }
+   },
+   "frameworks": [
+    "React",
+    "Redux Toolkit",
+    "Vite",
+    "Vitest"
+   ],
+   "services": {
+    "sdks": [
+     "Mapbox"
+    ],
+    "hosts": [
+     "admin.ai.bw.boldest.io",
+     "ai.bw.boldest.io",
+     "apitools.boldest.io",
+     "developers.google.com",
+     "embed.boldest.io",
+     "maps.googleapis.com",
+     "t.me",
+     "wa.me",
+     "www.google.com",
+     "www.lavozdegalicia.es"
+    ],
+    "images": []
+   },
+   "signals": {
+    "files": 271,
+    "code_files": 85,
+    "test_files": 1,
+    "ai_tooling": [],
+    "quality": [
+     "app/eslint.config.js"
+    ],
+    "ci": [
+     "app/bitbucket-pipelines.yml",
+     "bitbucket-pipelines.yml"
+    ],
+    "containers": [],
+    "iac": [],
+    "docblocks": 20,
+    "typed_docblocks": 33
+   },
+   "config": {
+    ".env.example": "e41c9ed6d2c1fbb4daa2fd7b40c7488c3120519f",
+    "app/bitbucket-pipelines.yml": "2432a6d8da5c51cbe5c5c0bc26cde6f186491e06",
+    "app/vite.config.js": "14b6de18b5a4da7b6e839fcf4e8fda4e61d92f4e",
+    "bitbucket-pipelines.yml": "6dc5296d593984f722414f046955b35fd7a34129"
+   },
+   "base_images": []
+  },
+  "{a090a86d-a915-40c6-b484-206a34b05f4f}": {
+   "uuid": "{a090a86d-a915-40c6-b484-206a34b05f4f}",
+   "slug": "observer-bw",
+   "name": "observer-bw",
+   "full_name": "boldest-dev/observer-bw",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BWID",
+   "project_name": "bwidget",
+   "created_on": "2026-03-16T12:00:17.922139+00:00",
+   "updated_on": "2026-05-02T12:58:04.273953+00:00",
+   "size": 33424,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/observer-bw",
+   "git": {
+    "ok": true,
+    "head": "5ec25e7be1d87e5765ea3f85f45abe0e8eef3ed7",
+    "head_commit": {
+     "hash": "5ec25e7be1d87e5765ea3f85f45abe0e8eef3ed7",
+     "author": "Jose M Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2026-05-02T14:57:58+02:00",
+     "subject": "bug"
+    },
+    "first_commit": {
+     "hash": "235958a81e5edccf68d74f33ab5930ba6b582136",
+     "author": "Jose M. Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2026-03-16T12:00:19+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 17,
+    "branches": {
+     "main": {
+      "hash": "5ec25e7be1d87e5765ea3f85f45abe0e8eef3ed7",
+      "date": "2026-05-02T14:57:58+02:00",
+      "author": "Jose M Porto"
+     }
+    }
+   },
+   "deps": {},
+   "frameworks": [],
+   "services": {
+    "sdks": [],
+    "hosts": [
+     "osv.boldest.io"
+    ],
+    "images": [
+     "timberio/vector"
+    ]
+   },
+   "signals": {
+    "files": 11,
+    "code_files": 0,
+    "test_files": 0,
+    "ai_tooling": [],
+    "quality": [],
+    "ci": [],
+    "containers": [
+     "docker-compose.yml"
+    ],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {
+    ".env.example": "3e43e529988052b5231b49c68471f564b8950dc3",
+    "docker-compose.yml": "a2315c8117a6b8f6b7f0f0952821d102b96674a4"
+   },
+   "base_images": []
+  },
+  "{1853359c-4c68-4766-91e6-a1bcd0ddfcbe}": {
+   "uuid": "{1853359c-4c68-4766-91e6-a1bcd0ddfcbe}",
+   "slug": "analytics-frontend",
+   "name": "analytics-frontend",
+   "full_name": "boldest-dev/analytics-frontend",
+   "description": "",
+   "language": "javascript",
+   "is_private": true,
+   "project_key": "BOL",
+   "project_name": "boldest",
+   "created_on": "2026-01-07T13:44:21.368650+00:00",
+   "updated_on": "2026-05-20T10:22:04.893687+00:00",
+   "size": 680340,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/analytics-frontend",
+   "git": {
+    "ok": true,
+    "head": "9ebb5b59e38ab506f54d75e196815b95f445e489",
+    "head_commit": {
+     "hash": "9ebb5b59e38ab506f54d75e196815b95f445e489",
+     "author": "manueljpy",
+     "email": "manueljpy@gmail.com",
+     "date": "2026-05-20T10:22:02+00:00",
+     "subject": "Merged in feature/kpi-updates-and-kpi-details (pull request #15)"
+    },
+    "first_commit": {
+     "hash": "f184335a4f62948035a74b33d4bdc3c593276a30",
+     "author": "Jose M. Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2026-01-07T13:44:22+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 53,
+    "branches": {
+     "main": {
+      "hash": "9ebb5b59e38ab506f54d75e196815b95f445e489",
+      "date": "2026-05-20T10:22:02+00:00",
+      "author": "manueljpy"
+     }
+    }
+   },
+   "deps": {
+    "app/package.json": {
+     "ecosystem": "npm",
+     "packages": {
+      "@date-io/dayjs": "^3.2.0",
+      "@dnd-kit/core": "^6.3.1",
+      "@dnd-kit/sortable": "^10.0.0",
+      "@dnd-kit/utilities": "^3.2.2",
+      "@emotion/react": "^11.14.0",
+      "@emotion/styled": "^11.14.0",
+      "@lexical/react": "^0.29.0",
+      "@mui/icons-material": "^6.4.7",
+      "@mui/lab": "^6.0.0-beta.30",
+      "@mui/material": "^6.4.10",
+      "@mui/x-date-pickers": "^8.26.0",
+      "@reduxjs/toolkit": "^2.5.1",
+      "@tinymce/tinymce-react": "^6.1.0",
+      "@vis.gl/react-google-maps": "^1.5.3",
+      "@vitejs/plugin-react-swc": "^3.8.1",
+      "axios": "^1.7.9",
+      "browser-image-compression": "^2.0.2",
+      "chart.js": "^4.5.1",
+      "dayjs": "^1.11.13",
+      "formik": "^2.4.6",
+      "gettext-parser": "^8.0.0",
+      "gettext.js": "^2.0.3",
+      "i18next-conv": "^15.1.1",
+      "jed": "^1.1.1",
+      "json-schema-to-yup": "^1.8.8",
+      "md5": "^2.3.0",
+      "npm": "^11.1.0",
+      "react": "^18.2.0",
+      "react-chartjs-2": "^5.3.1",
+      "react-dom": "^18.2.0",
+      "react-redux": "^9.2.0",
+      "react-router-dom": "^7.1.5",
+      "react-select": "^5.10.1",
+      "styled-components": "^6.1.15",
+      "uuid": "^11.1.0",
+      "yup": "^1.6.1",
+      "@eslint/js": "^9.20.0 (dev)",
+      "eslint": "^9.20.1 (dev)",
+      "eslint-plugin-react": "^7.37.4 (dev)",
+      "globals": "^15.15.0 (dev)",
+      "jsdom": "^26.0.0 (dev)",
+      "po2json": "^1.0.0-beta-3 (dev)",
+      "sass-embedded": "^1.85.0 (dev)",
+      "typescript-eslint": "^8.24.1 (dev)",
+      "vite": "^6.1.0 (dev)",
+      "vitest": "^3.0.6 (dev)"
+     }
+    }
+   },
+   "frameworks": [
+    "Material UI",
+    "React",
+    "Redux Toolkit",
+    "Vite",
+    "Vitest"
+   ],
+   "services": {
+    "sdks": [
+     "Google Maps"
+    ],
+    "hosts": [
+     "apitools.boldest.io",
+     "apitools.dev.boldest.io",
+     "osv-api.boldest.io"
+    ],
+    "images": []
+   },
+   "signals": {
+    "files": 103,
+    "code_files": 37,
+    "test_files": 1,
+    "ai_tooling": [],
+    "quality": [
+     "app/eslint.config.js"
+    ],
+    "ci": [],
+    "containers": [],
+    "iac": [],
+    "docblocks": 3,
+    "typed_docblocks": 20
+   },
+   "config": {
+    ".env.example": "137a0426b014788037c28a249ed62354b98d3e3f",
+    "app/vite.config.js": "be5ee909a56609d85aaaad5628faf0b385d8c4b1"
+   },
+   "base_images": []
+  },
+  "{66e48f8b-5970-4b04-937e-76b2de43a049}": {
+   "uuid": "{66e48f8b-5970-4b04-937e-76b2de43a049}",
+   "slug": "observer",
+   "name": "observer",
+   "full_name": "boldest-dev/observer",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BOL",
+   "project_name": "boldest",
+   "created_on": "2025-11-23T10:00:43.182012+00:00",
+   "updated_on": "2026-04-29T08:04:23.135902+00:00",
+   "size": 153912,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/observer",
+   "git": {
+    "ok": true,
+    "head": "16655a71141a4b65c0e96f7857b0227eeed8abdc",
+    "head_commit": {
+     "hash": "16655a71141a4b65c0e96f7857b0227eeed8abdc",
+     "author": "Jose M Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2026-04-29T10:04:11+02:00",
+     "subject": "Vector: Evitar mejor datos incorrectos"
+    },
+    "first_commit": {
+     "hash": "ecee959b59212decb1a6a3066c659bc74077ad9b",
+     "author": "Jose M. Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2025-11-23T10:00:44+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 27,
+    "branches": {
+     "main": {
+      "hash": "16655a71141a4b65c0e96f7857b0227eeed8abdc",
+      "date": "2026-04-29T10:04:11+02:00",
+      "author": "Jose M Porto"
+     }
+    }
+   },
+   "deps": {},
+   "frameworks": [],
+   "services": {
+    "sdks": [],
+    "hosts": [
+     "alcudia.bw.boldest.io",
+     "ancares.bw.boldest.io",
+     "articyeti.bw.boldest.io",
+     "barbanzaarousa.bw.boldest.io",
+     "barlan.bw.boldest.io",
+     "explora.handmadeexperiences.com",
+     "explora.turismovivencial.com",
+     "farmsteaded.bw.boldest.io",
+     "ferrolterra.bw.boldest.io",
+     "geogranada.bw.boldest.io",
+     "greenlandtravel.bw.boldest.io",
+     "handmadeexperiences.bw.boldest.io",
+     "interrias.bw.boldest.io",
+     "kannak.bw.boldest.io",
+     "mapa.destinoteverga.es",
+     "mapas.ancaresterrasdeburon.gal",
+     "mapas.geoparquedegranada.com",
+     "mapas.integral.es",
+     "mapas.puertollano.es",
+     "mapas.tee-travel.com",
+     "mapas.turismoferrolterra.es",
+     "mapasturismoregiondemurcia.es",
+     "maps.algo.es",
+     "maps.arcticyeti.com",
+     "maps.barlantravel.com",
+     "maps.greenland-travel.com",
+     "maps.kannak.es",
+     "maps.yourfriendinreykjavik.com",
+     "maps.yourtravel.pt",
+     "murcia.bw.boldest.io",
+     "puertollano.bw.boldest.io",
+     "quever.interrias.com",
+     "teetravel.bw.boldest.io",
+     "tours.tee-travel.com",
+     "toursteetravel.bw.boldest.io",
+     "www.bing.com",
+     "www.mapasturismoregiondemurcia.es",
+     "xeoortegal.bw.boldest.io",
+     "yfr.bw.boldest.io",
+     "yourtravel.bw.boldest.io"
+    ],
+    "images": []
+   },
+   "signals": {
+    "files": 41,
+    "code_files": 4,
+    "test_files": 1,
+    "ai_tooling": [
+     "CLAUDE.md"
+    ],
+    "quality": [],
+    "ci": [],
+    "containers": [
+     "devel.vector.Dockerfile",
+     "production.vector.Dockerfile"
+    ],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {
+    ".env.example": "05065f8023c59dec84579ad79b3942de493452b1"
+   },
+   "base_images": [
+    "timberio/vector:0.51.1-alpine",
+    "timberio/vector:0.52.X-alpine"
+   ]
+  },
+  "{8387f2b3-0d9f-4ff9-b001-9012d1b4185d}": {
+   "uuid": "{8387f2b3-0d9f-4ff9-b001-9012d1b4185d}",
+   "slug": "bfiles",
+   "name": "bfiles",
+   "full_name": "boldest-dev/bfiles",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BOL",
+   "project_name": "boldest",
+   "created_on": "2025-04-21T15:12:27.717173+00:00",
+   "updated_on": "2025-04-21T15:24:11.407189+00:00",
+   "size": 110945,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/bfiles",
+   "git": {
+    "ok": true,
+    "head": "67a0176fc01671a4cc78f4144df321fe5d28a73c",
+    "head_commit": {
+     "hash": "67a0176fc01671a4cc78f4144df321fe5d28a73c",
+     "author": "Jose M Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2025-04-21T17:24:02+02:00",
+     "subject": "Agregar configuración inicial para el servicio BFiles con MinIO y Docker Compose, incluyendo archivos de entorno, scripts de desarrollo y configuración de Docker."
+    },
+    "first_commit": {
+     "hash": "7a92a3cbc19334b90099de1e483a4c378be53825",
+     "author": "Jose M. Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2025-04-21T15:12:28+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 2,
+    "branches": {
+     "main": {
+      "hash": "67a0176fc01671a4cc78f4144df321fe5d28a73c",
+      "date": "2025-04-21T17:24:02+02:00",
+      "author": "Jose M Porto"
+     }
+    }
+   },
+   "deps": {},
+   "frameworks": [],
+   "services": {
+    "sdks": [],
+    "hosts": [
+     "www.boldest.io"
+    ],
+    "images": []
+   },
+   "signals": {
+    "files": 12,
+    "code_files": 0,
+    "test_files": 0,
+    "ai_tooling": [],
+    "quality": [],
+    "ci": [],
+    "containers": [],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {
+    ".env.example": "f71d8290a3754aa21f06a042d35a93250e0eba05"
+   },
+   "base_images": []
+  },
+  "{7587e379-072a-4b1a-98e6-f80ff9f657ba}": {
+   "uuid": "{7587e379-072a-4b1a-98e6-f80ff9f657ba}",
+   "slug": "boldest-map-assistant",
+   "name": "boldest-map-assistant",
+   "full_name": "boldest-dev/boldest-map-assistant",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "DEP",
+   "project_name": "deprecated",
+   "created_on": "2025-04-30T05:45:09.959537+00:00",
+   "updated_on": "2026-06-12T10:19:12.912026+00:00",
+   "size": 8651605,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/boldest-map-assistant",
+   "git": {
+    "ok": true,
+    "head": "e37a6a536f5c228b7ba8e5d867b3fa16be18086c",
+    "head_commit": {
+     "hash": "e37a6a536f5c228b7ba8e5d867b3fa16be18086c",
+     "author": "manueljpy",
+     "email": "manueljpy@gmail.com",
+     "date": "2026-06-08T08:46:09+00:00",
+     "subject": "Merged in feature/google-places-search (pull request #85)"
+    },
+    "first_commit": {
+     "hash": "6cda6f105ccc21214c05f8a098bb225b452a6d7b",
+     "author": "pblanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2025-04-30T16:22:59+02:00",
+     "subject": "gitignore"
+    },
+    "commit_count": 437,
+    "branches": {
+     "devel": {
+      "hash": "e86d46ffbc70aae3cea051d9e865fcb90b60a24e",
+      "date": "2026-04-23T11:09:45+00:00",
+      "author": "Jose M. Porto"
+     },
+     "feature/add-new-and-ai-resources-to-other-days": {
+      "hash": "a348b9e0db1feb4fe2ab7df3a7f4955feb93633e",
+      "date": "2026-06-03T15:59:41+00:00",
+      "author": "manueljpy"
+     },
+     "fix/auth-loop-when-error": {
+      "hash": "c5cf5caa22620450d75021d736dcba52b576bf52",
+      "date": "2026-04-23T11:51:06+02:00",
+      "author": "Pablo Blanco"
+     },
+     "fix/authloop": {
+      "hash": "5ec5658aa4829e7696e976f39b13830e5e3224c6",
+      "date": "2026-04-23T14:57:14+02:00",
+      "author": "Pablo Blanco"
+     },
+     "fix/file_routes_absolute": {
+      "hash": "71fe4aa37e038ff281459f44dca30be081a4f437",
+      "date": "2025-05-07T20:55:24+02:00",
+      "author": "pblanco"
+     },
+     "fix/fix-add-new-existing-alternative-resource": {
+      "hash": "825e64679b6d02915c48106c766cbb8a5523e3d5",
+      "date": "2025-11-04T19:31:40+01:00",
+      "author": "Manuel Jiménez"
+     },
+     "fix/login-flicker-when-no-attributes": {
+      "hash": "619b6917a45852ce5d3506ca7de296cc36d97d1e",
+      "date": "2026-04-23T10:34:57+00:00",
+      "author": "manueljpy"
+     },
+     "fix/small-fixes": {
+      "hash": "0a906b99c5d53f28b0529a686a757a85e4b106f3",
+      "date": "2026-05-13T17:00:11+02:00",
+      "author": "Manuel Jiménez"
+     },
+     "main": {
+      "hash": "e37a6a536f5c228b7ba8e5d867b3fa16be18086c",
+      "date": "2026-06-08T08:46:09+00:00",
+      "author": "manueljpy"
+     },
+     "ordering_table": {
+      "hash": "17523bd8ad2cc5bb06ba540adb38777e360730c1",
+      "date": "2025-05-28T14:28:10+02:00",
+      "author": "pblanco"
+     },
+     "pipeline_uniformization": {
+      "hash": "a5a375a3c74186756691bae9507d7de440c2c1a5",
+      "date": "2025-07-11T16:48:57+02:00",
+      "author": "pblanco"
+     },
+     "production": {
+      "hash": "c61ff3690adb28350b55ba354c7267efa3f0beb7",
+      "date": "2026-06-05T10:52:41+00:00",
+      "author": "Jose M. Porto"
+     },
+     "token_expiration_logout": {
+      "hash": "800e5e5b34299000e7f88b51fb1eaf99d1f88df5",
+      "date": "2025-08-19T13:15:07+02:00",
+      "author": "Pablo Blanco"
+     }
+    }
+   },
+   "deps": {
+    "app/package.json": {
+     "ecosystem": "npm",
+     "packages": {
+      "@date-io/dayjs": "^3.2.0",
+      "@dnd-kit/core": "^6.3.1",
+      "@dnd-kit/sortable": "^10.0.0",
+      "@dnd-kit/utilities": "^3.2.2",
+      "@emotion/react": "^11.14.0",
+      "@emotion/styled": "^11.14.0",
+      "@hello-pangea/dnd": "^18.0.1",
+      "@lexical/react": "^0.29.0",
+      "@mui/icons-material": "^6.4.7",
+      "@mui/lab": "^6.0.0-beta.30",
+      "@mui/material": "^6.4.10",
+      "@mui/x-date-pickers": "^7.27.3",
+      "@reduxjs/toolkit": "^2.5.1",
+      "@tinymce/tinymce-react": "^6.1.0",
+      "@vis.gl/react-google-maps": "^1.5.3",
+      "@vitejs/plugin-react-swc": "^3.8.1",
+      "axios": "^1.7.9",
+      "browser-image-compression": "^2.0.2",
+      "dayjs": "^1.11.13",
+      "formik": "^2.4.6",
+      "fuse.js": "^7.1.0",
+      "gettext-parser": "^8.0.0",
+      "gettext.js": "^2.0.3",
+      "i18next-conv": "^15.1.1",
+      "jed": "^1.1.1",
+      "json-schema-to-yup": "^1.8.8",
+      "md5": "^2.3.0",
+      "npm": "^11.1.0",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-redux": "^9.2.0",
+      "react-router-dom": "^7.1.5",
+      "react-select": "^5.10.1",
+      "recharts": "^2.15.1",
+      "styled-components": "^6.1.15",
+      "uuid": "^11.1.0",
+      "yup": "^1.6.1",
+      "@eslint/js": "^9.20.0 (dev)",
+      "eslint": "^9.20.1 (dev)",
+      "eslint-plugin-react": "^7.37.4 (dev)",
+      "globals": "^15.15.0 (dev)",
+      "jsdom": "^26.0.0 (dev)",
+      "po2json": "^1.0.0-beta-3 (dev)",
+      "sass-embedded": "^1.85.0 (dev)",
+      "typescript-eslint": "^8.24.1 (dev)",
+      "vite": "^6.1.0 (dev)",
+      "vitest": "^3.0.6 (dev)"
+     }
+    }
+   },
+   "frameworks": [
+    "Material UI",
+    "React",
+    "Redux Toolkit",
+    "Vite",
+    "Vitest"
+   ],
+   "services": {
+    "sdks": [
+     "Google Maps"
+    ],
+    "hosts": [
+     "ai.bw.boldest.io",
+     "apitools.boldest.io",
+     "apitools.dev.boldest.io",
+     "www.tee-travel.com"
+    ],
+    "images": []
+   },
+   "signals": {
+    "files": 185,
+    "code_files": 92,
+    "test_files": 1,
+    "ai_tooling": [],
+    "quality": [
+     "app/eslint.config.js"
+    ],
+    "ci": [
+     "bitbucket-pipelines.yml"
+    ],
+    "containers": [],
+    "iac": [],
+    "docblocks": 34,
+    "typed_docblocks": 81
+   },
+   "config": {
+    ".env.example": "f8b320a4fd52f460b4fbba6926ca0ec13e38ec1d",
+    "app/vite.config.js": "012b8f0513d7d6b1c7949f44f826f8341163f851",
+    "bitbucket-pipelines.yml": "1b7205a8ed0a92cfc9ad45e88974ba2d9bee50cb"
+   },
+   "base_images": []
+  },
+  "{bfba9f60-5467-4912-9aa8-afe625561914}": {
+   "uuid": "{bfba9f60-5467-4912-9aa8-afe625561914}",
+   "slug": "boldest-devel",
+   "name": "boldest-devel",
+   "full_name": "boldest-dev/boldest-devel",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BOL",
+   "project_name": "boldest",
+   "created_on": "2025-02-26T10:05:40.126446+00:00",
+   "updated_on": "2025-11-14T09:38:35.863580+00:00",
+   "size": 298192,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/boldest-devel",
+   "git": {
+    "ok": true,
+    "head": "179455c5aa4a23b1ed628528b3a521e71b1ad665",
+    "head_commit": {
+     "hash": "179455c5aa4a23b1ed628528b3a521e71b1ad665",
+     "author": "Jose M Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2025-11-14T10:38:23+01:00",
+     "subject": "Actualizar traefik"
+    },
+    "first_commit": {
+     "hash": "e1730efaefccd23377728d34b129449ceeb5e819",
+     "author": "Jose M. Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2025-02-26T10:05:41+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 10,
+    "branches": {
+     "main": {
+      "hash": "179455c5aa4a23b1ed628528b3a521e71b1ad665",
+      "date": "2025-11-14T10:38:23+01:00",
+      "author": "Jose M Porto"
+     }
+    }
+   },
+   "deps": {},
+   "frameworks": [],
+   "services": {
+    "sdks": [],
+    "hosts": [],
+    "images": [
+     "coredns/coredns",
+     "traefik"
+    ]
+   },
+   "signals": {
+    "files": 17,
+    "code_files": 0,
+    "test_files": 0,
+    "ai_tooling": [],
+    "quality": [],
+    "ci": [],
+    "containers": [
+     "docker-compose.yml"
+    ],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {
+    "docker-compose.yml": "fc9bd54bb4ff54e843fda9c59e8da77092870321",
+    "etc-traefik/config/middlewares.yml": "99094181f2e2e514b63e3f118bca65b925b62886",
+    "etc-traefik/config/tls.yml": "a07811e19d09412aa61bd573aebbed5f405a3a9d"
+   },
+   "base_images": []
+  },
+  "{a4309976-b8ee-494d-a43c-1f09a64af90d}": {
+   "uuid": "{a4309976-b8ee-494d-a43c-1f09a64af90d}",
+   "slug": "boldest-lib",
+   "name": "boldest-lib",
+   "full_name": "boldest-dev/boldest-lib",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BOL",
+   "project_name": "boldest",
+   "created_on": "2025-01-18T07:37:28.013190+00:00",
+   "updated_on": "2025-01-22T08:34:46.257318+00:00",
+   "size": 245493,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/boldest-lib",
+   "git": {
+    "ok": true,
+    "head": "52911c8bbd377b031bf3a69b8accd03ffdeba812",
+    "head_commit": {
+     "hash": "52911c8bbd377b031bf3a69b8accd03ffdeba812",
+     "author": "pblanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2025-01-22T09:34:39+01:00",
+     "subject": "Name"
+    },
+    "first_commit": {
+     "hash": "615bad47327aa96461e9148368100bdff1d02b6f",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2025-01-18T07:37:29+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 12,
+    "branches": {
+     "main": {
+      "hash": "52911c8bbd377b031bf3a69b8accd03ffdeba812",
+      "date": "2025-01-22T09:34:39+01:00",
+      "author": "pblanco"
+     }
+    }
+   },
+   "deps": {
+    "package.json": {
+     "ecosystem": "npm",
+     "packages": {
+      "@babel/cli": "^7.26.4 (dev)",
+      "@babel/core": "^7.26.0 (dev)",
+      "@babel/preset-env": "^7.26.0 (dev)",
+      "@babel/preset-react": "^7.26.3 (dev)"
+     }
+    }
+   },
+   "frameworks": [],
+   "services": {
+    "sdks": [],
+    "hosts": [],
+    "images": []
+   },
+   "signals": {
+    "files": 7,
+    "code_files": 2,
+    "test_files": 0,
+    "ai_tooling": [],
+    "quality": [],
+    "ci": [],
+    "containers": [],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {},
+   "base_images": []
+  },
+  "{ea21a2f2-a768-49cb-bdd5-9d56d6bc5e40}": {
+   "uuid": "{ea21a2f2-a768-49cb-bdd5-9d56d6bc5e40}",
+   "slug": "webtools",
+   "name": "webtools",
+   "full_name": "boldest-dev/webtools",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BOL",
+   "project_name": "boldest",
+   "created_on": "2024-11-28T18:14:21.001884+00:00",
+   "updated_on": "2026-10-21T16:34:14.563809+00:00",
+   "size": 1161930,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/webtools",
+   "git": {
+    "ok": true,
+    "head": "a7cc99c4031640e592176614f004451afee07939",
+    "head_commit": {
+     "hash": "a7cc99c4031640e592176614f004451afee07939",
+     "author": "Pablo Parapar",
+     "email": "pabloparapar@boldest.io",
+     "date": "2026-05-11T10:51:18+00:00",
+     "subject": "Merged in content-multiprocessing (pull request #13)"
+    },
+    "first_commit": {
+     "hash": "ad807562fccdbc55d9e7a50f4fe6fe4a35c68684",
+     "author": "Jose M. Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2024-11-28T18:14:21+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 124,
+    "branches": {
+     "add-zoomlevel-in-gengeo-tool": {
+      "hash": "39c205b649e01e63476186da209090e4293976cd",
+      "date": "2026-03-05T13:43:06+01:00",
+      "author": "Pablo Parapar"
+     },
+     "change-strings-in-webtools": {
+      "hash": "0d984713429795503dece1340163fb2a87d451c2",
+      "date": "2026-03-05T18:10:19+01:00",
+      "author": "Pablo Parapar"
+     },
+     "fixes-in-tools": {
+      "hash": "d2be80e9f529dddc5f1643f4615948b475533d82",
+      "date": "2026-03-13T14:17:55+01:00",
+      "author": "Pablo Parapar"
+     },
+     "generate_impl": {
+      "hash": "04d6412f632a2d4550e1fe930ed0ef55981c7dc7",
+      "date": "2025-11-14T13:48:51+01:00",
+      "author": "Pablo Parapar"
+     },
+     "main": {
+      "hash": "a7cc99c4031640e592176614f004451afee07939",
+      "date": "2026-05-11T10:51:18+00:00",
+      "author": "Pablo Parapar"
+     },
+     "redesign": {
+      "hash": "220d84e2caf42f9f8eb2067d29769892d270a612",
+      "date": "2026-03-13T16:14:10+01:00",
+      "author": "Pablo Parapar"
+     },
+     "refactor-to-standards": {
+      "hash": "dcfee463b055f0ef5e7be4ab8ea26a2b88a576f7",
+      "date": "2026-03-25T12:21:18+01:00",
+      "author": "Pablo Parapar"
+     },
+     "route-tools": {
+      "hash": "c9c27f9d90a2b3c6408f80808c81f031790593b7",
+      "date": "2026-10-21T18:08:03+02:00",
+      "author": "Pablo Parapar"
+     }
+    }
+   },
+   "deps": {
+    "app/package.json": {
+     "ecosystem": "npm",
+     "packages": {
+      "@astrojs/check": "^0.9.6",
+      "astro": "^5.18.0",
+      "typescript": "^5.9.2",
+      "path": "^0.12.7 (dev)",
+      "prettier": "^3.0.0 (dev)",
+      "prettier-plugin-astro": "0.14.1 (dev)"
+     }
+    }
+   },
+   "frameworks": [
+    "Astro",
+    "TypeScript"
+   ],
+   "services": {
+    "sdks": [],
+    "hosts": [
+     "apitools.local.boldest.io"
+    ],
+    "images": []
+   },
+   "signals": {
+    "files": 117,
+    "code_files": 9,
+    "test_files": 0,
+    "ai_tooling": [
+     ".claude/settings.json",
+     "CLAUDE.md"
+    ],
+    "quality": [
+     "app/.prettierrc",
+     "app/tsconfig.json"
+    ],
+    "ci": [],
+    "containers": [
+     ".dockerignore",
+     "app/.dockerignore",
+     "app/Dockerfile"
+    ],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {
+    "app/Dockerfile": "8dafd28071b70153a58d7cfa7709530d248b11b3",
+    "app/nginx.conf": "de42ed9d8ed6e7a84be4698dbdda8512258977e9"
+   },
+   "base_images": [
+    "nginx:alpine"
+   ]
+  },
+  "{ebc31aa7-f1aa-469b-83df-e40a3dc2efc9}": {
+   "uuid": "{ebc31aa7-f1aa-469b-83df-e40a3dc2efc9}",
+   "slug": "boldest-backend",
+   "name": "boldest-backend",
+   "full_name": "boldest-dev/boldest-backend",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BOL",
+   "project_name": "boldest",
+   "created_on": "2024-11-28T00:48:30.930292+00:00",
+   "updated_on": "2025-07-30T11:06:10.193303+00:00",
+   "size": 998236,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/boldest-backend",
+   "git": {
+    "ok": true,
+    "head": "84782bcf9dcd3de801fb85074586b8f6bd5aa18d",
+    "head_commit": {
+     "hash": "84782bcf9dcd3de801fb85074586b8f6bd5aa18d",
+     "author": "Pablo",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2025-07-30T12:33:10+02:00",
+     "subject": "black"
+    },
+    "first_commit": {
+     "hash": "7322d3edc6a10695e3a6d05b4f53cc59cced9855",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2024-11-28T00:48:31+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 48,
+    "branches": {
+     "category_drf_test": {
+      "hash": "0cb002af2efb40df472e9450ad247e58790cc7f7",
+      "date": "2025-07-27T03:01:41+02:00",
+      "author": "Pablo"
+     },
+     "docker_ready": {
+      "hash": "05de1db2b1097de7859a7a63bb0632b7e6f73ffd",
+      "date": "2025-07-24T23:05:18+02:00",
+      "author": "Pablo"
+     },
+     "jwt_login": {
+      "hash": "d2c8370f64482dc5b614be3eafee084288d80d94",
+      "date": "2025-07-25T03:39:22+02:00",
+      "author": "Pablo"
+     },
+     "main": {
+      "hash": "84782bcf9dcd3de801fb85074586b8f6bd5aa18d",
+      "date": "2025-07-30T12:33:10+02:00",
+      "author": "Pablo"
+     },
+     "multilang_model_list": {
+      "hash": "84782bcf9dcd3de801fb85074586b8f6bd5aa18d",
+      "date": "2025-07-30T12:33:10+02:00",
+      "author": "Pablo"
+     },
+     "working_traefik": {
+      "hash": "5d434eff465f750c0ee3bb808b0bc8687e1a97fc",
+      "date": "2025-07-25T12:37:16+02:00",
+      "author": "Pablo"
+     }
+    }
+   },
+   "deps": {
+    "pyproject.toml": {
+     "ecosystem": "python",
+     "packages": {
+      "django": "^5.1.3",
+      "asgiref": "^3.8.1",
+      "sqlparse": "^0.5.2",
+      "django-environ": "^0.11.2",
+      "psycopg2-binary": "^2.9.9",
+      "djangorestframework": "^3.14.0",
+      "djangorestframework-simplejwt": "^5.3.0",
+      "django-cors-headers": "^4.3.1",
+      "drf-spectacular": "^0.28.0",
+      "django-modeltranslation": "^0.19.16",
+      "black": "^25.1.0"
+     }
+    }
+   },
+   "frameworks": [
+    "Django",
+    "Django REST Framework"
+   ],
+   "services": {
+    "sdks": [],
+    "hosts": [
+     "backend.local.boldest.io",
+     "frontend.midominio.com"
+    ],
+    "images": []
+   },
+   "signals": {
+    "files": 36,
+    "code_files": 21,
+    "test_files": 0,
+    "ai_tooling": [],
+    "quality": [],
+    "ci": [],
+    "containers": [
+     ".devcontainer/setup.sh",
+     "Dockerfile"
+    ],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {
+    ".env.example": "97f1a84fde16d564c06be5fa960aafc904f17ca6",
+    "Dockerfile": "4810f9be4b99cc5d5eb70fa2bee1875ccd5f48a6",
+    "config/settings.py": "cce015f1aa22b22272009c7e4a8e88e4dc7ce174"
+   },
+   "base_images": [
+    "python:3.11-slim"
+   ]
+  },
+  "{d587cc59-0814-48da-a0c4-7ff63b253d26}": {
+   "uuid": "{d587cc59-0814-48da-a0c4-7ff63b253d26}",
+   "slug": "boldest-routeplanner",
+   "name": "boldest-routeplanner",
+   "full_name": "boldest-dev/boldest-routeplanner",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BOL",
+   "project_name": "boldest",
+   "created_on": "2024-07-11T22:49:55.612576+00:00",
+   "updated_on": "2025-12-19T16:02:17.869670+00:00",
+   "size": 4821528,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/boldest-routeplanner",
+   "git": {
+    "ok": true,
+    "head": "8b606dd20a97245417abd67cbb2d68cd873d76c6",
+    "head_commit": {
+     "hash": "8b606dd20a97245417abd67cbb2d68cd873d76c6",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2025-12-19T17:01:34+01:00",
+     "subject": "try to repair pipe"
+    },
+    "first_commit": {
+     "hash": "b981441ceb421146abffdebdbbb413222080b126",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2024-07-11T22:49:56+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 496,
+    "branches": {
+     "add_new_waypoint_v2": {
+      "hash": "507c503a866522f0fb329f7c50ce29b8b109fe19",
+      "date": "2024-08-19T11:52:37+02:00",
+      "author": "Pablo Blanco"
+     },
+     "backend_hello_world": {
+      "hash": "b3f3eb6e9605f4f5de47634b1fb9da176bc10076",
+      "date": "2024-09-19T12:50:11+02:00",
+      "author": "Pablo Blanco"
+     },
+     "backend_side_helpers": {
+      "hash": "2fe17139bfd41a56e30433809321d9f6f5800bfe",
+      "date": "2024-10-26T18:10:40+02:00",
+      "author": "pablinho.blanco@gmail.com"
+     },
+     "bugfixes_pat": {
+      "hash": "d717ea2fc018b49da3177259ca8dc45a9f4c7ed0",
+      "date": "2024-10-29T07:56:26+01:00",
+      "author": "pablo"
+     },
+     "create_paths": {
+      "hash": "780faea982b02287a9bcef04c555ae7de1ffc46d",
+      "date": "2024-08-06T07:41:00+02:00",
+      "author": "Pablo Blanco"
+     },
+     "hide_routes_markers": {
+      "hash": "9a155f67953c23c7c12cafc173029f7fd6362b15",
+      "date": "2024-09-04T07:24:30+02:00",
+      "author": "Pablo Blanco"
+     },
+     "kml_on_backend": {
+      "hash": "2dc62d76f7122d353975b99369416f37033783d5",
+      "date": "2024-11-05T16:21:08+01:00",
+      "author": "pablo"
+     },
+     "main": {
+      "hash": "8b606dd20a97245417abd67cbb2d68cd873d76c6",
+      "date": "2025-12-19T17:01:34+01:00",
+      "author": "Pablo Blanco"
+     },
+     "material-ui-interface": {
+      "hash": "55aed36414863b2b10c066b367765ff4a7aa0b41",
+      "date": "2024-08-01T10:57:58+02:00",
+      "author": "Pablo Blanco"
+     },
+     "multiple_routing_methods": {
+      "hash": "3bd0575e03ff025a75e34da7ba627fc336b7213a",
+      "date": "2024-07-19T03:02:38+02:00",
+      "author": "pablinho.blanco@gmail.com"
+     },
+     "new_path_routing": {
+      "hash": "0836c2bf14ccb4a6492c72c7ca3ca3b42a5fdf01",
+      "date": "2024-08-14T00:29:54+02:00",
+      "author": "Pablo Blanco"
+     },
+     "new_redux_structure": {
+      "hash": "e72fe48b6eb96ed8c325c30baf6895532e3589de",
+      "date": "2024-07-19T01:06:05+02:00",
+      "author": "pablinho.blanco@gmail.com"
+     },
+     "routing_bike_foot": {
+      "hash": "ea716a8707ea214dc7d54ff65e6af49b62aef7b3",
+      "date": "2025-01-24T08:28:04+01:00",
+      "author": "pblanco"
+     },
+     "subpath_history_welldone": {
+      "hash": "252c9de8bf70e7eb9d59388798402b021dda30cf",
+      "date": "2024-08-20T21:48:11+02:00",
+      "author": "Pablo Blanco"
+     },
+     "tmp_markers": {
+      "hash": "50622dbe24f757a6389e12b54bd65e8802f2df5f",
+      "date": "2024-08-02T08:37:46+02:00",
+      "author": "Pablo Blanco"
+     }
+    }
+   },
+   "deps": {
+    "routeplanner/package.json": {
+     "ecosystem": "npm",
+     "packages": {
+      "@emotion/react": "^11.11.4",
+      "@emotion/styled": "^11.11.5",
+      "@mui/icons-material": "^5.16.4",
+      "@mui/material": "^5.16.1",
+      "@reduxjs/toolkit": "^2.2.6",
+      "@testing-library/jest-dom": "^5.17.0",
+      "@testing-library/react": "^13.4.0",
+      "@testing-library/user-event": "^13.5.0",
+      "axios": "^1.7.2",
+      "leaflet": "^1.9.4",
+      "md5": "^2.3.0",
+      "react": "^18.3.1",
+      "react-color": "^2.19.3",
+      "react-dom": "^18.3.1",
+      "react-easy-sort": "^1.6.0",
+      "react-leaflet": "^4.2.1",
+      "react-redux": "^9.1.2",
+      "react-scripts": "^5.0.1",
+      "react-sortablejs": "^6.1.4",
+      "sass": "^1.77.8",
+      "sortablejs": "^1.15.2",
+      "web-vitals": "^2.1.4",
+      "@babel/core": "^7.24.9 (dev)",
+      "@babel/plugin-proposal-private-property-in-object": "^7.21.11 (dev)",
+      "@babel/preset-env": "^7.24.8 (dev)",
+      "babel-jest": "^29.7.0 (dev)",
+      "babel-loader": "^9.1.3 (dev)"
+     }
+    }
+   },
+   "frameworks": [
+    "Material UI",
+    "React",
+    "Redux Toolkit"
+   ],
+   "services": {
+    "sdks": [],
+    "hosts": [
+     "apitools.boldest.io",
+     "osm.org"
+    ],
+    "images": []
+   },
+   "signals": {
+    "files": 60,
+    "code_files": 28,
+    "test_files": 1,
+    "ai_tooling": [],
+    "quality": [
+     "routeplanner/jest.config.js"
+    ],
+    "ci": [
+     "bitbucket-pipelines.yml"
+    ],
+    "containers": [
+     "Dockerfile",
+     "docker-compose.yml"
+    ],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {
+    ".env.example": "cae1ebabbba0d48cc06de5a7b0a49ddd51000fb4",
+    "Dockerfile": "435a656b2cc34f247cbf2fb30cde2727ca09eec2",
+    "bitbucket-pipelines.yml": "fcd0ad4bc41a04d6605ee7e31f8d943c40e095d0",
+    "docker-compose.yml": "33e5ee1509210344d3911c044c0aa35fd27dc28c",
+    "routeplanner/webpack.config.js": "e47cd5ef0984f4e0f62b7909c2cfc424acb98b03"
+   },
+   "base_images": [
+    "node:20-alpine"
+   ]
+  },
+  "{c141f0c9-bd77-48c0-b980-02b80ed1f6f3}": {
+   "uuid": "{c141f0c9-bd77-48c0-b980-02b80ed1f6f3}",
+   "slug": "boldest-backofice",
+   "name": "boldest-backofice",
+   "full_name": "boldest-dev/boldest-backofice",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BOL",
+   "project_name": "boldest",
+   "created_on": "2024-07-11T22:48:34.632744+00:00",
+   "updated_on": "2024-07-11T22:48:36.586283+00:00",
+   "size": 54617,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/boldest-backofice",
+   "git": {
+    "ok": true,
+    "head": "3a8c7c141f2cbe85f840fe23a1f5d3efae0efef5",
+    "head_commit": {
+     "hash": "3a8c7c141f2cbe85f840fe23a1f5d3efae0efef5",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2024-07-11T22:48:35+00:00",
+     "subject": "Initial commit"
+    },
+    "first_commit": {
+     "hash": "3a8c7c141f2cbe85f840fe23a1f5d3efae0efef5",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2024-07-11T22:48:35+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 1,
+    "branches": {
+     "main": {
+      "hash": "3a8c7c141f2cbe85f840fe23a1f5d3efae0efef5",
+      "date": "2024-07-11T22:48:35+00:00",
+      "author": "Pablo Blanco"
+     }
+    }
+   },
+   "deps": {},
+   "frameworks": [],
+   "services": {
+    "sdks": [],
+    "hosts": [],
+    "images": []
+   },
+   "signals": {
+    "files": 1,
+    "code_files": 0,
+    "test_files": 0,
+    "ai_tooling": [],
+    "quality": [],
+    "ci": [],
+    "containers": [],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {},
+   "base_images": []
+  },
+  "{4c7ba3fd-3116-4645-9ab6-58ce031d3b00}": {
+   "uuid": "{4c7ba3fd-3116-4645-9ab6-58ce031d3b00}",
+   "slug": "boldest-backend.orig_old",
+   "name": "boldest-backend.orig_old",
+   "full_name": "boldest-dev/boldest-backend.orig_old",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "DEP",
+   "project_name": "deprecated",
+   "created_on": "2024-07-10T17:24:57.404323+00:00",
+   "updated_on": "2026-06-11T20:27:17.132295+00:00",
+   "size": 778678,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/boldest-backend.orig_old",
+   "git": {
+    "ok": true,
+    "head": "bb9ce9de05bbc9d2589d8a648873aa4ceb2f7cb2",
+    "head_commit": {
+     "hash": "bb9ce9de05bbc9d2589d8a648873aa4ceb2f7cb2",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2024-08-26T00:39:50+00:00",
+     "subject": "build correct name"
+    },
+    "first_commit": {
+     "hash": "7ffcbb02a9e4da427ff4a41d146852a5fb469cc6",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2024-07-10T17:24:58+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 47,
+    "branches": {
+     "main": {
+      "hash": "bb9ce9de05bbc9d2589d8a648873aa4ceb2f7cb2",
+      "date": "2024-08-26T00:39:50+00:00",
+      "author": "Pablo Blanco"
+     }
+    }
+   },
+   "deps": {
+    "pyproject.toml": {
+     "ecosystem": "python",
+     "packages": {
+      "django": "^5.0.6",
+      "psycopg2-binary": "^2.9.9",
+      "black": "^24.4.2",
+      "pre-commit": "^3.7.1",
+      "mypy": "^1.10.1",
+      "django-modeltranslation": "^0.19.5",
+      "djangorestframework": "^3.15.2",
+      "django-redis": "^5.4.0",
+      "isort": "^5.13.2",
+      "pytest": "^8.2.2",
+      "django-stubs": "^5.0.2"
+     }
+    }
+   },
+   "frameworks": [
+    "Django",
+    "Django REST Framework",
+    "pytest"
+   ],
+   "services": {
+    "sdks": [],
+    "hosts": [],
+    "images": [
+     "mailhog/mailhog",
+     "postgres",
+     "redis"
+    ]
+   },
+   "signals": {
+    "files": 32,
+    "code_files": 16,
+    "test_files": 2,
+    "ai_tooling": [],
+    "quality": [
+     ".pre-commit-config.yaml"
+    ],
+    "ci": [
+     "bitbucket-pipelines.yml"
+    ],
+    "containers": [
+     "Dockerfile",
+     "docker-compose.yml"
+    ],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {
+    "Dockerfile": "07bf7c000b7d8b921a2034549f9b6810b25d1150",
+    "bitbucket-pipelines.yml": "d2953a16c1935314f93e48952b1c80073d3042c0",
+    "docker-compose.yml": "15404cd1b169df2629471fc5eb300defd141af89"
+   },
+   "base_images": [
+    "python:3.12-slim-bullseye"
+   ]
+  },
+  "{b95c8f24-1425-44e9-975b-ee054e2a6de8}": {
+   "uuid": "{b95c8f24-1425-44e9-975b-ee054e2a6de8}",
+   "slug": "boldest-frontend.deprecated",
+   "name": "boldest-frontend.DEPRECATED",
+   "full_name": "boldest-dev/boldest-frontend.deprecated",
+   "description": "use frontend-public instead",
+   "language": "javascript",
+   "is_private": true,
+   "project_key": "DEP",
+   "project_name": "deprecated",
+   "created_on": "2024-07-10T17:25:28.302245+00:00",
+   "updated_on": "2026-06-11T20:26:29.160294+00:00",
+   "size": 2197448,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/boldest-frontend.deprecated",
+   "git": {
+    "ok": true,
+    "head": "509bdd26a4264aae210aa6f02919586e3b97207b",
+    "head_commit": {
+     "hash": "509bdd26a4264aae210aa6f02919586e3b97207b",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2026-05-04T10:07:12+02:00",
+     "subject": "fix pipeline"
+    },
+    "first_commit": {
+     "hash": "0d0a95a78550ab7475d2655c903fd10fe4806fd5",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2024-07-10T17:25:29+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 570,
+    "branches": {
+     "all_interface_components": {
+      "hash": "e81d81ed3c07b3cd95b46f1b3a30c87f730471e1",
+      "date": "2025-07-16T17:13:52+02:00",
+      "author": "pblanco"
+     },
+     "app_attributes": {
+      "hash": "247f5d5ef877bc2f500a9fd2276467fbde48feb2",
+      "date": "2025-08-28T09:11:57+02:00",
+      "author": "Pablo Blanco"
+     },
+     "app_redux_and_mocks": {
+      "hash": "cfd4b31bedb791560a8c7a4afa336a94309e9dc0",
+      "date": "2025-08-25T13:37:27+02:00",
+      "author": "Pablo Blanco"
+     },
+     "arreglos": {
+      "hash": "9043c0e01d464136ee8f9636e20dfff455a484ae",
+      "date": "2025-09-20T21:58:41+02:00",
+      "author": "Pablo Blanco"
+     },
+     "bwMap_FloatingDisplay": {
+      "hash": "331cbe549ce64e30e1306ce8b4bb554bed7ed791",
+      "date": "2025-11-06T12:43:20+01:00",
+      "author": "pablo Valcarce"
+     },
+     "bwMap_Mobile": {
+      "hash": "a462b4bf600c276da0b7a8dc204f72dd5b597f8a",
+      "date": "2025-11-19T12:50:38+01:00",
+      "author": "pablo Valcarce"
+     },
+     "bwMap_du": {
+      "hash": "e362efe072aee09a29a6f60b8c822f6b399e9121",
+      "date": "2025-11-12T15:19:53+01:00",
+      "author": "pablo Valcarce"
+     },
+     "bwMap_header": {
+      "hash": "4b0b8c0644cb80aee1353ab880896c3c8144f18c",
+      "date": "2025-11-06T10:39:50+01:00",
+      "author": "pablo Valcarce"
+     },
+     "bwMap_mainColumn": {
+      "hash": "8321db75ed0090ba8b93d617c8b0944a092129ab",
+      "date": "2025-11-06T10:41:04+01:00",
+      "author": "pablo Valcarce"
+     },
+     "bwMap_style_adpatation": {
+      "hash": "331cbe549ce64e30e1306ce8b4bb554bed7ed791",
+      "date": "2025-11-06T12:43:20+01:00",
+      "author": "pablo Valcarce"
+     },
+     "data_mocks": {
+      "hash": "3e37a5bf66cdab40ca022f435d336c9680f8b7df",
+      "date": "2025-08-25T16:07:22+02:00",
+      "author": "Pablo Blanco"
+     },
+     "devel": {
+      "hash": "0b63ffd83e83bd91829238496b7568f0b632bba8",
+      "date": "2025-11-13T10:07:17+00:00",
+      "author": "Jose M. Porto"
+     },
+     "devel_panel_basic_actions": {
+      "hash": "3ed0119e1265fab18665191a542725b7069b190d",
+      "date": "2025-10-13T13:22:57+02:00",
+      "author": "pablo Valcarce"
+     },
+     "favorites": {
+      "hash": "28a0c0c0b54a493c505cd1c918bdf07be8b50670",
+      "date": "2025-06-17T22:07:18+02:00",
+      "author": "pblanco"
+     },
+     "feat/multiple-load-cases": {
+      "hash": "b1dc41b7968145a9a8868b5929c2d11786b95797",
+      "date": "2026-04-13T12:46:15+02:00",
+      "author": "Pablo Blanco"
+     },
+     "feature/multiple-load-cases": {
+      "hash": "b1dc41b7968145a9a8868b5929c2d11786b95797",
+      "date": "2026-04-13T12:46:15+02:00",
+      "author": "Pablo Blanco"
+     },
+     "first_try_ssr": {
+      "hash": "696a996253a6b79ce1a0a5ed8f541465d5e54cf7",
+      "date": "2025-06-01T20:35:14+02:00",
+      "author": "pblanco"
+     },
+     "fixes": {
+      "hash": "6b0cbd1abf6438b4566c7006e2125eac74336171",
+      "date": "2025-11-06T13:23:47+01:00",
+      "author": "pablo Valcarce"
+     },
+     "floatingDisplay": {
+      "hash": "5214b3ca2fa040112270ee034b082678d80bcb49",
+      "date": "2025-11-10T11:14:24+01:00",
+      "author": "pablo Valcarce"
+     },
+     "floating_display": {
+      "hash": "50b73600e43ae542e84a77e4341754a5e7e6d679",
+      "date": "2025-10-13T13:27:05+02:00",
+      "author": "pablo Valcarce"
+     },
+     "footer": {
+      "hash": "ccfe7082c580f3ec25a595a6aa0c521299f1f1f6",
+      "date": "2025-10-30T09:21:57+01:00",
+      "author": "pablo Valcarce"
+     },
+     "icons_change_desktop": {
+      "hash": "e3c1a4b0d012583f22d7dd2e46e93681d3a81a4e",
+      "date": "2025-10-08T10:14:59+02:00",
+      "author": "pablo Valcarce"
+     },
+     "interfacechooser": {
+      "hash": "482af2e8f64f54512a877377a6af34d3b3517535",
+      "date": "2025-09-23T17:12:18+00:00",
+      "author": "Pablo Blanco"
+     },
+     "landing_Mobile": {
+      "hash": "b064756b0784e7b739213196942a02e9dba0ca4b",
+      "date": "2025-12-01T15:02:04+01:00",
+      "author": "pablo Valcarce"
+     },
+     "landing_details": {
+      "hash": "1f16315766e0b081e714a9dd18613909e466845e",
+      "date": "2025-10-27T14:48:30+01:00",
+      "author": "pablo Valcarce"
+     },
+     "landing_estructure": {
+      "hash": "8c93517b2953df8a80b3ecdfe39dbd4409ac9529",
+      "date": "2025-10-28T09:25:18+01:00",
+      "author": "pablo Valcarce"
+     },
+     "landing_hotel": {
+      "hash": "2e60776d134e12475adca97830ac74a2e5563006",
+      "date": "2025-10-27T09:27:12+01:00",
+      "author": "pablo Valcarce"
+     },
+     "landing_mosaic_devel": {
+      "hash": "f570bf9ef8c3899fb5494c92af1e38daa1e2a07a",
+      "date": "2025-10-22T11:34:41+02:00",
+      "author": "pablo Valcarce"
+     },
+     "landing_route_Component": {
+      "hash": "899376b9a5d0a57b419084621484d63465419617",
+      "date": "2025-10-29T16:25:08+01:00",
+      "author": "pablo Valcarce"
+     },
+     "large_view_height_fix": {
+      "hash": "27de75a0aa5c2f930a9c3d67866bd0beaae79999",
+      "date": "2025-10-02T14:09:05+02:00",
+      "author": "pablo Valcarce"
+     },
+     "large_view_styles_begin": {
+      "hash": "e732f7297e0da9f695f273a4a8d2d4f81f472d52",
+      "date": "2025-09-18T10:26:43+02:00",
+      "author": "pablo Valcarce"
+     },
+     "load_sequence": {
+      "hash": "f65515d6f897b47855357c4d0e7b3b7d2874cd04",
+      "date": "2025-09-02T15:59:15+02:00",
+      "author": "Pablo Blanco"
+     },
+     "logos": {
+      "hash": "cd283b1ec92b79e2fd243a90fcabec315528fd62",
+      "date": "2025-10-28T09:16:47+01:00",
+      "author": "pablo Valcarce"
+     },
+     "main": {
+      "hash": "509bdd26a4264aae210aa6f02919586e3b97207b",
+      "date": "2026-05-04T10:07:12+02:00",
+      "author": "Pablo Blanco"
+     },
+     "mainColumn": {
+      "hash": "86580dabefff9ab511550a35a37ad96e25402b88",
+      "date": "2025-11-10T09:11:27+01:00",
+      "author": "pablo Valcarce"
+     },
+     "map": {
+      "hash": "3f4efb1b33d72f0d8424d3fe2b4cbe3f85c28c17",
+      "date": "2025-10-29T10:49:27+01:00",
+      "author": "pablo Valcarce"
+     },
+     "map_loading": {
+      "hash": "93ac4a9a2c0e0a826aceb5108c85f67e1bef11fe",
+      "date": "2025-10-22T11:33:08+02:00",
+      "author": "pablo Valcarce"
+     },
+     "map_mocks_and_redux": {
+      "hash": "94d63c43a1683f275595ac8c95f2b7e43fad000b",
+      "date": "2025-08-29T10:06:20+02:00",
+      "author": "Pablo Blanco"
+     },
+     "portal": {
+      "hash": "f29b6c0a36da79c57978211bc257b5e635bfca95",
+      "date": "2026-02-20T13:03:50+01:00",
+      "author": "pablo Valcarce"
+     },
+     "proposal": {
+      "hash": "79711ac067b2bf66c4bf1d68170b0f8590e646fb",
+      "date": "2025-10-22T11:22:05+02:00",
+      "author": "pablo Valcarce"
+     },
+     "proposal_itinerario": {
+      "hash": "6bd2760c0b285b058c4448320d92670876b7744e",
+      "date": "2025-10-29T09:18:27+01:00",
+      "author": "pablo Valcarce"
+     },
+     "proposal_mainContent_Hero": {
+      "hash": "1dae05bab24a6de3ba7c8e2b7817e09812cdf81c",
+      "date": "2025-10-29T10:58:42+01:00",
+      "author": "pablo Valcarce"
+     },
+     "proposal_ofert_data": {
+      "hash": "f3d93febad1fe4b1871589fae407535f01d70ba8",
+      "date": "2025-10-29T10:33:12+01:00",
+      "author": "pablo Valcarce"
+     },
+     "proposal_ofert_detail": {
+      "hash": "65e5c5624b09b71a52f03f50f0b6983b42be87fa",
+      "date": "2025-10-29T14:27:34+01:00",
+      "author": "pablo Valcarce"
+     },
+     "proposals_summary": {
+      "hash": "5ba2d5a332b14f9fefeb343c8e35b4c9bcbc1282",
+      "date": "2025-10-29T11:14:12+01:00",
+      "author": "pablo Valcarce"
+     },
+     "refactor_parameters": {
+      "hash": "215a613e916771fa2c93bb9fbcdf5cf8582eaf0f",
+      "date": "2026-02-06T11:31:19+01:00",
+      "author": "Pablo Blanco"
+     },
+     "renaming_domain": {
+      "hash": "e41eae3fe046a4bfc507cd77f2219095a7f7dd98",
+      "date": "2025-07-09T22:09:55+02:00",
+      "author": "pblanco"
+     },
+     "resource": {
+      "hash": "06e298130091b7ff50550a1a7136d82036ba673d",
+      "date": "2025-10-22T11:19:59+02:00",
+      "author": "pablo Valcarce"
+     },
+     "same_admin_struct": {
+      "hash": "1b26b95c839864b4435133cf5d425191ee827dc8",
+      "date": "2025-09-30T00:51:19+02:00",
+      "author": "Pablo Blanco"
+     },
+     "short_view_begin": {
+      "hash": "43e5bb4b899e17e9835026a893faab351d0b33a5",
+      "date": "2025-10-08T10:24:33+02:00",
+      "author": "pablo Valcarce"
+     },
+     "streetview_funcional": {
+      "hash": "5bb886d89eda806afa75b2d3cd85ba501de66782",
+      "date": "2025-08-29T14:00:53+02:00",
+      "author": "Pablo Blanco"
+     },
+     "tags_bug": {
+      "hash": "8eae865a3ca125c2774d3cac2cbd72c30a37a237",
+      "date": "2025-12-12T13:52:50+01:00",
+      "author": "Pablo Blanco"
+     },
+     "test": {
+      "hash": "f7e09298a248f67a7d430d4f3453d559cb4cccae",
+      "date": "2025-10-10T11:04:06+02:00",
+      "author": "pablo Valcarce"
+     },
+     "tiny_screen": {
+      "hash": "09193648325e92e970722419583b7a26e0108f31",
+      "date": "2025-08-26T07:49:22+02:00",
+      "author": "Pablo Blanco"
+     },
+     "vite_ssr_based_on_official_repo": {
+      "hash": "1b350834609e35035ce13f4bd74a2ecf343ec6a3",
+      "date": "2025-06-05T17:34:40+02:00",
+      "author": "pblanco"
+     },
+     "web_components": {
+      "hash": "f9fde58bca5fb50993dc80533ec3ea3cdcadfcb2",
+      "date": "2025-06-24T12:22:59+02:00",
+      "author": "pblanco"
+     },
+     "window_devel_actions": {
+      "hash": "bf16c808d381ce0a070d47f975c9b2569dcdfe3f",
+      "date": "2025-06-14T00:59:10+02:00",
+      "author": "pblanco"
+     }
+    }
+   },
+   "deps": {
+    "app/package.json": {
+     "ecosystem": "npm",
+     "packages": {
+      "@emotion/react": "^11.14.0",
+      "@hello-pangea/dnd": "^18.0.1",
+      "@lexical/react": "^0.29.0",
+      "@reduxjs/toolkit": "^2.5.1",
+      "@tinymce/tinymce-react": "^6.1.0",
+      "@vitejs/plugin-react-swc": "^3.8.1",
+      "axios": "^1.7.9",
+      "gettext-parser": "^8.0.0",
+      "gettext.js": "^2.0.3",
+      "i18next-conv": "^15.1.1",
+      "jed": "^1.1.1",
+      "mapbox-gl": "^2.6.1",
+      "nouislider": "^15.8.1",
+      "npm": "^11.1.0",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-redux": "^9.2.0",
+      "react-rnd": "^10.5.2",
+      "react-router-dom": "^7.1.5",
+      "react-select": "^5.10.1",
+      "react-to-webcomponent": "^2.0.1",
+      "recharts": "^2.15.1",
+      "swiper": "^12.0.3",
+      "@eslint/js": "^9.20.0 (dev)",
+      "eslint": "^9.20.1 (dev)",
+      "eslint-plugin-react": "^7.37.4 (dev)",
+      "globals": "^15.15.0 (dev)",
+      "javascript-obfuscator": "^4.1.1 (dev)",
+      "jsdom": "^26.0.0 (dev)",
+      "po2json": "^1.0.0-beta-3 (dev)",
+      "rollup-plugin-javascript-obfuscator": "^1.0.4 (dev)",
+      "sass-embedded": "^1.85.0 (dev)",
+      "typescript-eslint": "^8.24.1 (dev)",
+      "vite": "^6.1.0 (dev)",
+      "vite-plugin-svgr": "^4.5.0 (dev)",
+      "vitest": "^3.0.6 (dev)"
+     }
+    }
+   },
+   "frameworks": [
+    "React",
+    "Redux Toolkit",
+    "Vite",
+    "Vitest"
+   ],
+   "services": {
+    "sdks": [
+     "Mapbox"
+    ],
+    "hosts": [
+     "ai.bw.boldest.io",
+     "apitools.boldest.io",
+     "es.wikiloc.com",
+     "maps.googleapis.com",
+     "www.aranga.es",
+     "www.lavozdegalicia.es"
+    ],
+    "images": []
+   },
+   "signals": {
+    "files": 234,
+    "code_files": 87,
+    "test_files": 1,
+    "ai_tooling": [],
+    "quality": [
+     "app/eslint.config.js"
+    ],
+    "ci": [
+     "app/bitbucket-pipelines.yml",
+     "bitbucket-pipelines.yml"
+    ],
+    "containers": [],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {
+    ".env.example": "7f7971fac1c6ddf75088d532e9069055321f83ad",
+    "app/bitbucket-pipelines.yml": "2432a6d8da5c51cbe5c5c0bc26cde6f186491e06",
+    "app/vite.config.js": "ef67d6bccb1d3bb2a59b34191aa81838a3cc048b",
+    "bitbucket-pipelines.yml": "c170decf13f4c04240695392ae984f8691a6fea9"
+   },
+   "base_images": []
+  },
+  "{6562df45-c13a-4be3-91ea-9bedbfd296cb}": {
+   "uuid": "{6562df45-c13a-4be3-91ea-9bedbfd296cb}",
+   "slug": "bw-docker",
+   "name": "bw-docker",
+   "full_name": "boldest-dev/bw-docker",
+   "description": "Entorno Docker para DEVEL en bwidget",
+   "language": "",
+   "is_private": true,
+   "project_key": "BWID",
+   "project_name": "bwidget",
+   "created_on": "2024-07-03T10:11:41.339904+00:00",
+   "updated_on": "2026-09-25T14:29:25.957118+00:00",
+   "size": 1174492,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/bw-docker",
+   "git": {
+    "ok": true,
+    "head": "92162016d615af57453db143dbde1f6370597c16",
+    "head_commit": {
+     "hash": "92162016d615af57453db143dbde1f6370597c16",
+     "author": "Jose M Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2026-09-25T16:29:12+02:00",
+     "subject": "Añadir php-zip"
+    },
+    "first_commit": {
+     "hash": "cfcdc71159f27b935cc0deedaa957f1ce12360f6",
+     "author": "Jose M. Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2024-07-03T10:11:43+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 36,
+    "branches": {
+     "devel_traefik": {
+      "hash": "cc48f144d21d16d73f5e60e78cf3f2e29a099200",
+      "date": "2025-03-12T09:14:39+01:00",
+      "author": "Jose M Porto"
+     },
+     "main": {
+      "hash": "92162016d615af57453db143dbde1f6370597c16",
+      "date": "2026-09-25T16:29:12+02:00",
+      "author": "Jose M Porto"
+     },
+     "templateForm": {
+      "hash": "1c639f1e86e068c97f014ca5540015a4c0eb1a07",
+      "date": "2025-07-01T18:09:27+02:00",
+      "author": "pepa"
+     },
+     "v_1.2": {
+      "hash": "a2d09afda4775e5c3b5d055c7e1d61f37a2730ba",
+      "date": "2024-09-26T13:44:39+02:00",
+      "author": "Jose M Porto"
+     }
+    }
+   },
+   "deps": {},
+   "frameworks": [],
+   "services": {
+    "sdks": [],
+    "hosts": [],
+    "images": [
+     "dkr.boldest.io/boldest/bw-core-dev",
+     "mariadb",
+     "redis"
+    ]
+   },
+   "signals": {
+    "files": 36,
+    "code_files": 0,
+    "test_files": 0,
+    "ai_tooling": [],
+    "quality": [],
+    "ci": [],
+    "containers": [
+     "docker-compose.tpl.yml",
+     "image-dev/Dockerfile"
+    ],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {
+    "docker-compose.tpl.yml": "3098c9026702909f977a712dac1fccb3c2cbb892",
+    "image-dev/Dockerfile": "f297e7097239da847b38cf9d633def933ad85961",
+    "image-dev/apache2/ZZZ-default/httpdocs/.htaccess": "e19ec83e9e22c3d13a2e9c46899be4989fa92a8d"
+   },
+   "base_images": [
+    "ubuntu:20.04"
+   ]
+  },
+  "{2b76bef9-9888-400d-93b7-18d6bbc3ac4f}": {
+   "uuid": "{2b76bef9-9888-400d-93b7-18d6bbc3ac4f}",
+   "slug": "bw-pdf-server",
+   "name": "bw-pdf-server",
+   "full_name": "boldest-dev/bw-pdf-server",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BWID",
+   "project_name": "bwidget",
+   "created_on": "2024-05-21T09:37:12.365324+00:00",
+   "updated_on": "2026-01-22T10:13:57.244952+00:00",
+   "size": 423237,
+   "mainbranch": "main",
+   "html_url": "https://bitbucket.org/boldest-dev/bw-pdf-server",
+   "git": {
+    "ok": true,
+    "head": "749a1a74fd9211f0c6aa88eba85f6f416988de83",
+    "head_commit": {
+     "hash": "749a1a74fd9211f0c6aa88eba85f6f416988de83",
+     "author": "Jose M Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2026-01-22T11:13:43+01:00",
+     "subject": "Manipular el mapa BW si existe bWidgetMap"
+    },
+    "first_commit": {
+     "hash": "5ba6e15b0179663d43ac518315541c6c6d76868f",
+     "author": "Jose M. Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2024-05-21T09:37:13+00:00",
+     "subject": "Initial commit"
+    },
+    "commit_count": 21,
+    "branches": {
+     "main": {
+      "hash": "749a1a74fd9211f0c6aa88eba85f6f416988de83",
+      "date": "2026-01-22T11:13:43+01:00",
+      "author": "Jose M Porto"
+     }
+    }
+   },
+   "deps": {
+    "app/package.json": {
+     "ecosystem": "npm",
+     "packages": {
+      "express": "^4.19.2",
+      "playwright": "^1.44.0"
+     }
+    }
+   },
+   "frameworks": [
+    "Express"
+   ],
+   "services": {
+    "sdks": [],
+    "hosts": [],
+    "images": []
+   },
+   "signals": {
+    "files": 26,
+    "code_files": 1,
+    "test_files": 0,
+    "ai_tooling": [],
+    "quality": [],
+    "ci": [],
+    "containers": [
+     "serverDocker/Dockerfile",
+     "serverDocker/docker-compose.yml"
+    ],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {
+    "serverDocker/Dockerfile": "48fada3c454e7ac39a327f71ee37ef0338481b9d",
+    "serverDocker/docker-compose.yml": "7669b5f9ce0bd37a1e352939cae571da848744a3"
+   },
+   "base_images": [
+    "node:20"
+   ]
+  },
+  "{f0a9747e-95c9-46a9-867f-a762c5744b4a}": {
+   "uuid": "{f0a9747e-95c9-46a9-867f-a762c5744b4a}",
+   "slug": "bw-docs",
+   "name": "bw-docs",
+   "full_name": "boldest-dev/bw-docs",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BWID",
+   "project_name": "bwidget",
+   "created_on": "2024-03-06T15:47:14.770743+00:00",
+   "updated_on": "2026-04-14T05:33:35.859369+00:00",
+   "size": 809230,
+   "mainbranch": "master",
+   "html_url": "https://bitbucket.org/boldest-dev/bw-docs",
+   "git": {
+    "ok": true,
+    "head": "4e883422de4b7bb6fdae6b16c47d30cf0c5c8728",
+    "head_commit": {
+     "hash": "4e883422de4b7bb6fdae6b16c47d30cf0c5c8728",
+     "author": "pepa",
+     "email": "pepaps@gmail.com",
+     "date": "2026-04-14T07:33:30+02:00",
+     "subject": "Unifying descriptions for advancedConf"
+    },
+    "first_commit": {
+     "hash": "d7f6fadd9e218805597a19b522de3d4fbfdeb14b",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2024-03-06T16:54:15+01:00",
+     "subject": "ignore"
+    },
+    "commit_count": 125,
+    "branches": {
+     "master": {
+      "hash": "4e883422de4b7bb6fdae6b16c47d30cf0c5c8728",
+      "date": "2026-04-14T07:33:30+02:00",
+      "author": "pepa"
+     },
+     "web-components": {
+      "hash": "358322f41101cf059bd8449b98018d5e9f879bdb",
+      "date": "2026-01-31T20:43:44+01:00",
+      "author": "Pablo Blanco"
+     }
+    }
+   },
+   "deps": {
+    "pyproject.toml": {
+     "ecosystem": "python",
+     "packages": {
+      "sphinx": "^7.2.6",
+      "sphinx-rtd-theme": "^1.3.0",
+      "sphinxcontrib-httpdomain": "^1.8.1",
+      "myst-parser": "^2.0.0"
+     }
+    }
+   },
+   "frameworks": [],
+   "services": {
+    "sdks": [],
+    "hosts": [
+     "base.bw.boldest.io",
+     "bwidget.local.boldest.io"
+    ],
+    "images": []
+   },
+   "signals": {
+    "files": 42,
+    "code_files": 3,
+    "test_files": 0,
+    "ai_tooling": [],
+    "quality": [],
+    "ci": [
+     "bitbucket-pipelines.yml"
+    ],
+    "containers": [
+     "docker-compose.yml",
+     "docker/Dockerfile"
+    ],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {
+    "bitbucket-pipelines.yml": "3018653e2cadff11b35079800e56ee09ee2a5fc1",
+    "docker-compose.yml": "d19065e5872e9978385358ae21e5f798b40a7123",
+    "docker/Dockerfile": "4ccbb2ead4cbd0b3be1563ba42ca8e0b13ba6256",
+    "docs/Makefile": "9dbb87a4c146ec87406d8c75f1a49cbb4942c36c"
+   },
+   "base_images": [
+    "nginx:latest",
+    "sphinxdoc/sphinx"
+   ]
+  },
+  "{8e6183b9-54dc-4517-95d5-150c5f66db9a}": {
+   "uuid": "{8e6183b9-54dc-4517-95d5-150c5f66db9a}",
+   "slug": "autocontent",
+   "name": "autocontent",
+   "full_name": "boldest-dev/autocontent",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BWID",
+   "project_name": "bwidget",
+   "created_on": "2024-02-08T15:30:34.494299+00:00",
+   "updated_on": "2026-10-20T15:26:23.250423+00:00",
+   "size": 14345101,
+   "mainbranch": "master",
+   "html_url": "https://bitbucket.org/boldest-dev/autocontent",
+   "git": {
+    "ok": true,
+    "head": "71bb634a9f752ae73a8f458f4da6b4a1fff6c4fd",
+    "head_commit": {
+     "hash": "71bb634a9f752ae73a8f458f4da6b4a1fff6c4fd",
+     "author": "Pablo Parapar",
+     "email": "pabloparapar@boldest.io",
+     "date": "2026-10-20T17:22:12+02:00",
+     "subject": "rename project id param in map_to_resource"
+    },
+    "first_commit": {
+     "hash": "30af8dea06814a4d754dac216105844600437995",
+     "author": "Simon Neira",
+     "email": "simon@boldest.io",
+     "date": "2024-02-08T16:42:33+01:00",
+     "subject": ".gitignore"
+    },
+    "commit_count": 1067,
+    "branches": {
+     "add-locationZoom-in-gengeo": {
+      "hash": "020ad48d2b5c3abe17047bde56b44755e5604668",
+      "date": "2026-03-05T13:52:40+01:00",
+      "author": "Pablo Parapar"
+     },
+     "analytics-in-apitools": {
+      "hash": "cfa387077c4907cc2749c27b3a9ddd3e04717384",
+      "date": "2026-07-02T19:20:28+02:00",
+      "author": "Pablo Parapar"
+     },
+     "async-map_assistant": {
+      "hash": "ef0108aeaa5750557b0dc6cfea1e6f78c6c282bc",
+      "date": "2026-02-23T20:01:17+01:00",
+      "author": "Jose M Porto"
+     },
+     "calculating_zoom_level": {
+      "hash": "27ebe1539db315f6e0b7f93db93b77340f034785",
+      "date": "2025-07-08T21:32:36+02:00",
+      "author": "pablinho.blanco@gmail.com"
+     },
+     "claude": {
+      "hash": "b1d023a5401f53a0db8fa3617fa000d7172b9888",
+      "date": "2026-05-12T09:47:21+02:00",
+      "author": "Jose M Porto"
+     },
+     "fix/no_routing_fail_cache": {
+      "hash": "e1d608307a99d54d67d348988618aca6134a66aa",
+      "date": "2026-07-08T08:16:54+02:00",
+      "author": "Pablo Blanco"
+     },
+     "fixes-in-apitools": {
+      "hash": "f09233d49d5d5ddc14e1560e2d338bd4a58b7109",
+      "date": "2026-03-17T15:46:55+01:00",
+      "author": "Pablo Parapar"
+     },
+     "gen_descriptions_proc": {
+      "hash": "ca92b7a0b1245dd17a0e0b3b0572f2d7bd5263b9",
+      "date": "2025-11-17T14:16:46+01:00",
+      "author": "Pablo Parapar"
+     },
+     "generate-categories": {
+      "hash": "4d1822b64b9c87c10bf59f8ce2a474f3d6c664e6",
+      "date": "2026-04-30T15:50:27+02:00",
+      "author": "Pablo Parapar"
+     },
+     "image_convert_zips": {
+      "hash": "a88de062509271c4ea01e654a8529f9341b9712c",
+      "date": "2026-03-05T12:09:35+01:00",
+      "author": "Pablo Parapar"
+     },
+     "improve-translations": {
+      "hash": "f5df40512f169bf59b5b810995ff4a54ba290372",
+      "date": "2026-08-18T16:56:26+02:00",
+      "author": "Pablo Parapar"
+     },
+     "kml_on_backend": {
+      "hash": "1f807cf2ab781be81bddf9f196d3d2e531c31bb1",
+      "date": "2024-11-03T23:25:35+01:00",
+      "author": "pablo"
+     },
+     "master": {
+      "hash": "71bb634a9f752ae73a8f458f4da6b4a1fff6c4fd",
+      "date": "2026-10-20T17:22:12+02:00",
+      "author": "Pablo Parapar"
+     },
+     "new_redids_implementation": {
+      "hash": "051ccf0e44634efcea3db801212681fea668b833",
+      "date": "2024-11-02T20:08:21+01:00",
+      "author": "pablo"
+     },
+     "new_routings": {
+      "hash": "3b3b640dbaacb545b164b6a1c0c476a38d036527",
+      "date": "2025-01-24T10:39:51+01:00",
+      "author": "pblanco"
+     },
+     "redis_cache_for_routing_service": {
+      "hash": "3a56d6e067bba820aea151b3105e889d922f9f54",
+      "date": "2024-10-31T13:43:33+01:00",
+      "author": "pablo"
+     },
+     "renovar-ia": {
+      "hash": "31aab609c1549c85089b9017b8104e6287637832",
+      "date": "2026-10-15T12:01:02+02:00",
+      "author": "Jose M Porto"
+     },
+     "route_planner_paths": {
+      "hash": "1897ff919a46c2f6ad3f478a95aca550b2997f55",
+      "date": "2024-10-22T11:58:29+02:00",
+      "author": "Pablo"
+     },
+     "zoom_by_bounds": {
+      "hash": "9471ee339956c0e57839e85546ee165d64e26005",
+      "date": "2025-08-12T12:20:27+02:00",
+      "author": "Pablo Blanco"
+     }
+    }
+   },
+   "deps": {
+    "pyproject.toml": {
+     "ecosystem": "python",
+     "packages": {
+      "requests": ">=2.33.0",
+      "httpx": ">=0.28.1",
+      "html5lib": ">=1.1",
+      "html-to-markdown": ">=3.1.0",
+      "beautifulsoup4": ">=4.14.0",
+      "types-beautifulsoup4": "*",
+      "jsonschema": ">=4.25.0",
+      "jwt": ">=1.3.1",
+      "unidecode": ">=1.3.6",
+      "lxml": ">=6.0.0",
+      "redis": ">=7.0.0",
+      "jinja2": ">=3.1.0",
+      "pypdf": ">=6.9.0",
+      "deepl": ">=1.29.0",
+      "openai": ">=2.0.0",
+      "anthropic": ">=0.101.0",
+      "fastapi": ">=0.135.0",
+      "pydantic": ">=2.12.5",
+      "slowapi": ">=0.1.9",
+      "python-multipart": ">=0.0.24",
+      "pillow": ">=12.0.0",
+      "pillow-avif-plugin": ">=1.5.0",
+      "pillow-heif": ">=1.3.0",
+      "qrcode": ">=8.2",
+      "boto3": ">=1.40.0",
+      "firecrawl-py": ">=4.22.0",
+      "filetype": ">=1.2.0",
+      "defusedxml": ">=0.7.1",
+      "autopep8": ">=2.3.0",
+      "bandit": ">=1.8.6",
+      "black": ">=25.1.0",
+      "factory-boy": ">=3.3.3",
+      "flake8": ">=7.3.0",
+      "freezegun": ">=1.5.5",
+      "icecream": ">=2.1.0",
+      "isort": ">=6.0.1",
+      "mypy": ">=1.17.1",
+      "pip-audit": ">=2.10.0",
+      "pip-tools": ">=7.5.3",
+      "pylint": ">=3.3.8",
+      "pytest-asyncio": ">=1.1.0",
+      "pytest-cov": ">=6.2.1",
+      "pytest-mock": ">=3.11.0",
+      "pytest": ">=8.4.1",
+      "radon": ">=6.0.1",
+      "responses": ">=0.25.8",
+      "setuptools": ">=82.0.1",
+      "types-boto3": ">=1.40.23",
+      "types-requests": ">=2.31.0",
+      "vulture": ">=2.14",
+      "watchfiles": ">=1.1.0"
+     }
+    }
+   },
+   "frameworks": [
+    "FastAPI",
+    "Pydantic",
+    "pytest"
+   ],
+   "services": {
+    "sdks": [
+     "AWS",
+     "Anthropic",
+     "OpenAI",
+     "Redis"
+    ],
+    "hosts": [
+     "api.firecrawl.dev",
+     "api.lettermint.co",
+     "api.shutterstock.com",
+     "api.w2m.com",
+     "apitools.dev.boldest.io",
+     "apitools.local.boldest.io",
+     "arcticyeti.es",
+     "arival.travel",
+     "backsubbetica.novacreative.es",
+     "base.bw.boldest.io",
+     "bwidget-base.boldest.io",
+     "bwidget.local.boldest.io",
+     "es.wikiloc.com",
+     "fareharbor.com",
+     "fuerteventura.bw.boldest.io",
+     "grandtour.catalunya.com",
+     "graphhopper.com",
+     "maps.arcticyeti.com",
+     "maps.googleapis.com",
+     "media.gettyimages.com",
+     "new-adventures.transforms.svdcdn.com",
+     "newadventures.org.uk",
+     "osv.boldest.io",
+     "spainbytrain.bw.boldest.io",
+     "trekking.gr",
+     "turismodelasubbetica.es",
+     "visitcalamillor.com",
+     "visitferrol.com",
+     "visitmasham.com",
+     "widget.getyourguide.com",
+     "www.alamy.com",
+     "www.boldest.io",
+     "www.calidadendestino.es",
+     "www.catalunya.com",
+     "www.edu.xunta.gal",
+     "www.getyourguide.com",
+     "www.google.com",
+     "www.japan-experience.com",
+     "www.leaartibaiturismo.com",
+     "www.opengis.net",
+     "www.rutavinorondamalaga.com",
+     "www.thetrainline.com",
+     "www.tortosaturisme.cat",
+     "www.trekking.gr",
+     "www.viator.com",
+     "www.visitametllademar.com",
+     "www.zonacomercial.galdar.es"
+    ],
+    "images": []
+   },
+   "signals": {
+    "files": 559,
+    "code_files": 270,
+    "test_files": 46,
+    "ai_tooling": [
+     ".claude/agents/pylint-checker.md",
+     ".claude/agents/security-reviewer.md",
+     ".claude/settings.json",
+     ".claude/skills/fastapi",
+     ".claude/skills/new-endpoint/SKILL.md",
+     ".claude/skills/run-tests/SKILL.md",
+     ".github/copilot-instructions.md",
+     "CLAUDE.md"
+    ],
+    "quality": [
+     ".flake8"
+    ],
+    "ci": [],
+    "containers": [
+     ".dockerignore"
+    ],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {
+    ".env.example": "7ada6dee273c1a50cf41581b1ca059279a8f073a",
+    "Makefile": "531007b6e260e234b4ea6cc933747cf4686175cc"
+   },
+   "base_images": []
+  },
+  "{c4a07927-c9ee-4b4a-9df7-779226bd8b33}": {
+   "uuid": "{c4a07927-c9ee-4b4a-9df7-779226bd8b33}",
+   "slug": "bw-docs_old",
+   "name": "bw-docs_old",
+   "full_name": "boldest-dev/bw-docs_old",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "DEP",
+   "project_name": "deprecated",
+   "created_on": "2024-02-06T07:03:08.569357+00:00",
+   "updated_on": "2026-06-11T20:25:13.932544+00:00",
+   "size": 51970,
+   "mainbranch": "master",
+   "html_url": "https://bitbucket.org/boldest-dev/bw-docs_old",
+   "git": {
+    "ok": true,
+    "head": "daeab2a1a117aa91ce394409717741d54dec041e",
+    "head_commit": {
+     "hash": "daeab2a1a117aa91ce394409717741d54dec041e",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2024-02-06T08:06:24+01:00",
+     "subject": "initial commit"
+    },
+    "first_commit": {
+     "hash": "24b067cc586391e94b69a1e8c04e0a9e5ed6c250",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2024-02-06T08:05:44+01:00",
+     "subject": "ignore"
+    },
+    "commit_count": 2,
+    "branches": {
+     "master": {
+      "hash": "daeab2a1a117aa91ce394409717741d54dec041e",
+      "date": "2024-02-06T08:06:24+01:00",
+      "author": "Pablo Blanco"
+     }
+    }
+   },
+   "deps": {
+    "pyproject.toml": {
+     "ecosystem": "python",
+     "packages": {
+      "sphinx": "^7.2.6",
+      "sphinx-rtd-theme": "^1.3.0",
+      "sphinxcontrib-httpdomain": "^1.8.1"
+     }
+    }
+   },
+   "frameworks": [],
+   "services": {
+    "sdks": [],
+    "hosts": [],
+    "images": []
+   },
+   "signals": {
+    "files": 40,
+    "code_files": 2,
+    "test_files": 0,
+    "ai_tooling": [],
+    "quality": [],
+    "ci": [
+     "bitbucket-pipelines.yml"
+    ],
+    "containers": [
+     "docker-compose.yml",
+     "docker/Dockerfile"
+    ],
+    "iac": [],
+    "docblocks": 0,
+    "typed_docblocks": 0
+   },
+   "config": {
+    "bitbucket-pipelines.yml": "cc456b1f4283330df9e382df48afe9c24ed06926",
+    "docker-compose.yml": "9862f2da441dadf20be377dfca0c248d7160bd52",
+    "docker/Dockerfile": "a50207e26c8fee4d2b566af9e796289436679149",
+    "docs/Makefile": "e312f7f4fd502c0b046699d4672efed65f57fc77"
+   },
+   "base_images": [
+    "nginx:latest",
+    "sphinxdoc/sphinx"
+   ]
+  },
+  "{09ff43b0-740e-4a25-9abf-34c34360adad}": {
+   "uuid": "{09ff43b0-740e-4a25-9abf-34c34360adad}",
+   "slug": "bwprojects",
+   "name": "bwprojects",
+   "full_name": "boldest-dev/bwprojects",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BWID",
+   "project_name": "bwidget",
+   "created_on": "2024-02-06T07:34:11.953848+00:00",
+   "updated_on": "2026-10-21T11:00:05.553318+00:00",
+   "size": 56987443,
+   "mainbranch": "master",
+   "html_url": "https://bitbucket.org/boldest-dev/bwprojects",
+   "git": {
+    "ok": true,
+    "head": "e4d8de291d82df32aa7f320d31a30c4c2cc0cf18",
+    "head_commit": {
+     "hash": "e4d8de291d82df32aa7f320d31a30c4c2cc0cf18",
+     "author": "Jose M Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2026-10-21T12:59:52+02:00",
+     "subject": "Devel"
+    },
+    "first_commit": {
+     "hash": "c40219a6e67218071792bfb609345797b05df38e",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2024-02-06T08:36:25+01:00",
+     "subject": "ignores"
+    },
+    "commit_count": 1118,
+    "branches": {
+     "ETL_3x3": {
+      "hash": "c7d5b609bfc5513dcd9a6955f8353ffae5b4957c",
+      "date": "2025-10-24T14:56:04+02:00",
+      "author": "Pablo Parapar"
+     },
+     "ETL_estella": {
+      "hash": "dee68281926469a2a11483dca67df16666e4a46c",
+      "date": "2026-06-16T18:46:36+02:00",
+      "author": "Pablo Parapar"
+     },
+     "ETL_riasbaixas_changes": {
+      "hash": "bcaf4facf193f6203db4a1fb7ff923631a47e65d",
+      "date": "2026-03-04T11:01:18+01:00",
+      "author": "Pablo Parapar"
+     },
+     "ETL_sitges": {
+      "hash": "c2476e262ea9b1dbdeb0dd8bbd484911dfd44adf",
+      "date": "2026-06-12T19:12:20+02:00",
+      "author": "Pablo Parapar"
+     },
+     "ETL_tahoe": {
+      "hash": "67ddf58e60b53aa0977f5c008ed78d2011915ecc",
+      "date": "2026-06-04T13:53:12+02:00",
+      "author": "Pablo Parapar"
+     },
+     "ETL_terraeauga": {
+      "hash": "84f1bf528fd53431ab0cb35f4b819a146b04345b",
+      "date": "2026-06-23T18:54:22+02:00",
+      "author": "Pablo Parapar"
+     },
+     "ETL_territorioponiente": {
+      "hash": "c4f0609a1db6f1dd08aa37eea1b08c064182a201",
+      "date": "2026-05-21T18:17:46+02:00",
+      "author": "Pablo Parapar"
+     },
+     "ETL_turismoslowng": {
+      "hash": "fe7035a85dd3121f9a69a8e270090ccf35d6406d",
+      "date": "2025-08-05T12:53:26+02:00",
+      "author": "Jose M Porto"
+     },
+     "landingMosaico": {
+      "hash": "905622f9044fc72d8b7c584a2723a076699cb419",
+      "date": "2026-01-13T17:10:40+01:00",
+      "author": "pepa"
+     },
+     "master": {
+      "hash": "e4d8de291d82df32aa7f320d31a30c4c2cc0cf18",
+      "date": "2026-10-21T12:59:52+02:00",
+      "author": "Jose M Porto"
+     },
+     "routeplanner_activation": {
+      "hash": "985f3a5b5c9f66220064d56f9a35dc7b6b237b35",
+      "date": "2025-02-17T16:24:48+01:00",
+      "author": "pblanco"
+     },
+     "updates_ETLs": {
+      "hash": "a0d60b7e4e768ad5c35ec78cc5fdfab17068de76",
+      "date": "2026-07-13T19:38:06+02:00",
+      "author": "Pablo Parapar"
+     },
+     "videosCortosBwprojects": {
+      "hash": "37ea09f69e1bcd63b43f6e43fd3c231c63bf8c20",
+      "date": "2025-12-22T11:49:50+01:00",
+      "author": "pepa"
+     },
+     "videosCurtos": {
+      "hash": "d3cd00c163397771d1ecd733422909138207851e",
+      "date": "2025-12-13T09:06:05+01:00",
+      "author": "pepa"
+     }
+    }
+   },
+   "deps": {},
+   "frameworks": [],
+   "services": {
+    "sdks": [],
+    "hosts": [
+     "algo.eu",
+     "amarinalucense.gal",
+     "apitools.boldest.io",
+     "apitools.dev.boldest.io",
+     "base.bw.boldest.io",
+     "bwidget.local.boldest.io",
+     "embed.boldest.io",
+     "estella.bw.boldest.io",
+     "galiciafoodexperience-bwidget.local.boldest.io",
+     "lancaster-bwidget.local.boldest.io",
+     "login.travelbook.vip",
+     "lospueblosmasbonitosdeespana.org",
+     "mapasviajar.elperiodico.com",
+     "maps.lloretdemar.org",
+     "murcia-bwidget.local.boldest.io",
+     "pdfserver.local.boldest.io",
+     "ponientegranada.bw.boldest.io",
+     "pueblosbonitos.bw.boldest.io",
+     "quever.interrias.com",
+     "riasbaixas.bw.boldest.io",
+     "rutadelvinoriasbaixas.com",
+     "sitges.bw.boldest.io",
+     "sitgesanytime.protectfive.com",
+     "slocal.bw.boldest.io",
+     "st-rusticae.bw.boldest.io",
+     "st-tur4all.bw.boldest.io",
+     "st-tvivencial.bw.boldest.io",
+     "startbootstrap.com",
+     "tahoe.bw.boldest.io",
+     "terraeauga.bw.boldest.io",
+     "terraeauga.gal",
+     "tierraestellapre.tcsa.es",
+     "turismo-oscoseo.com",
+     "turismocoruna.com",
+     "turismoslowng.bw.boldest.io",
+     "use.typekit.net",
+     "viajar.elperiodico.com",
+     "visitbelogradchik.bg",
+     "visitlaketahoe.com",
+     "www.artnaturagalicia.com",
+     "www.boldest.io",
+     "www.ponientegranada.es",
+     "www.singular-places.com",
+     "www.tee-travel.com"
+    ],
+    "images": []
+   },
+   "signals": {
+    "files": 2649,
+    "code_files": 815,
+    "test_files": 0,
+    "ai_tooling": [
+     "CLAUDE.md"
+    ],
+    "quality": [],
+    "ci": [],
+    "containers": [],
+    "iac": [],
+    "docblocks": 128,
+    "typed_docblocks": 77
+   },
+   "config": {
+    "projects/13_lloretdemar/httpdocs/feed/.htaccess": "025aa7d6a7f344bf5b938de31ffda6e2dd547d1a",
+    "projects/19_facendocaminho/httpdocs/.htaccess": "fe85210696662d727c497884da2742db283efb11",
+    "projects/30_uribe/httpdocs/feed/.htaccess": "025aa7d6a7f344bf5b938de31ffda6e2dd547d1a",
+    "projects/49_mapasfp/httpdocs/.htaccess": "cf617fa4f2ecf2e2a330623223b4428490b40629",
+    "projects/77_rvrsacra/httpdocs/.htaccess": "512dc15c9d051a52c031f3b80a01507383cdf998"
+   },
+   "base_images": []
+  },
+  "{30802b92-c95c-43a7-95b8-7717d722771c}": {
+   "uuid": "{30802b92-c95c-43a7-95b8-7717d722771c}",
+   "slug": "bwidget",
+   "name": "bwidget",
+   "full_name": "boldest-dev/bwidget",
+   "description": "",
+   "language": "",
+   "is_private": true,
+   "project_key": "BWID",
+   "project_name": "bwidget",
+   "created_on": "2024-02-06T15:34:41.887542+00:00",
+   "updated_on": "2026-10-21T16:10:06.398699+00:00",
+   "size": 18381509,
+   "mainbranch": "master",
+   "html_url": "https://bitbucket.org/boldest-dev/bwidget",
+   "git": {
+    "ok": true,
+    "head": "f2c95dcad5c404d4b51471d8dca2a3866318a257",
+    "head_commit": {
+     "hash": "f2c95dcad5c404d4b51471d8dca2a3866318a257",
+     "author": "Jose M Porto",
+     "email": "porto@gcorreo.com",
+     "date": "2026-10-21T18:09:59+02:00",
+     "subject": "Ajustar el schema de la V3"
+    },
+    "first_commit": {
+     "hash": "d0596c7c9e7abec783365258cf2bb6cdd61ee284",
+     "author": "Pablo Blanco",
+     "email": "pablinho.blanco@gmail.com",
+     "date": "2024-02-06T16:35:51+01:00",
+     "subject": ".gitignore"
+    },
+    "commit_count": 2430,
+    "branches": {
+     "3d_fly_refine": {
+      "hash": "2c95317ea6ce2cead1aaee3b1d6da53d9b88e387",
+      "date": "2025-01-16T20:52:37+01:00",
+      "author": "pblanco"
+     },
+     "3d_flyover_fixes": {
+      "hash": "bc8113bc21f935b8dd10f8ce87286b682eeef993",
+      "date": "2024-06-18T14:47:35+02:00",
+      "author": "Pablo Blanco"
+     },
+     "3d_flyover_new": {
+      "hash": "5c92b5985ce7962650e077338f1fc06b1b9862f5",
+      "date": "2024-05-23T09:26:36+02:00",
+      "author": "Pablo Blanco"
+     },
+     "3d_flyover_profile_animation": {
+      "hash": "085604c958e64339bb4dff8798e8d6273f8026bd",
+      "date": "2024-05-24T09:56:33+02:00",
+      "author": "Pablo Blanco"
+     },
+     "BwApiV3": {
+      "hash": "b21c21b375907aec571bde83f90a2e9ca9a1f9b6",
+      "date": "2026-10-21T11:05:25+02:00",
+      "author": "Jose M Porto"
+     },
+     "accesoLandingsUser": {
+      "hash": "c4e5b3e009bfbcaf4884a13bdd1be2cb325f2424",
+      "date": "2025-06-02T15:38:39+02:00",
+      "author": "pepa"
+     },
+     "ai_assistant_filter": {
+      "hash": "af9810dad0240b9ce31edf7cb7d8ae8393b582f2",
+      "date": "2024-04-09T17:30:12+02:00",
+      "author": "Pablo Blanco"
+     },
+     "axustesLandingPro": {
+      "hash": "4f98930a193521e360f2f65e3f99add6a6df575e",
+      "date": "2026-07-14T08:38:20+02:00",
+      "author": "pepa"
+     },
+     "axustesOfertas": {
+      "hash": "3244004f333468a864253d65e2298967a2f25062",
+      "date": "2025-09-23T12:34:47+02:00",
+      "author": "pepa"
+     },
+     "backend_test_contents": {
+      "hash": "2d2bbf11443ac412982a808d176d87fe476f7dfa",
+      "date": "2024-06-25T18:05:04+02:00",
+      "author": "Pablo Blanco"
+     },
+     "bugMarkers": {
+      "hash": "a2c170af48a727a06494ebd5fd6e7efa7772ed64",
+      "date": "2025-09-16T18:02:22+02:00",
+      "author": "pepa"
+     },
+     "bug_infowindow": {
+      "hash": "69aee2a1372e9996bce9c362b4c2f775ab0252eb",
+      "date": "2024-12-12T10:31:30+01:00",
+      "author": "pblanco"
+     },
+     "bug_infowindow_label": {
+      "hash": "735e5e924c7ee2217de56a47d7552d2e32c1bb69",
+      "date": "2024-12-16T15:00:52+01:00",
+      "author": "pblanco"
+     },
+     "bug_markers_descuberto_por_pepa": {
+      "hash": "876ddfe5bf3f414cc2bc7018444fc72eff3f9b58",
+      "date": "2024-04-25T19:24:22+02:00",
+      "author": "Pablo Blanco"
+     },
+     "bug_routeplanner_admin": {
+      "hash": "73739ce3704ece101a4ac6760ab1a81d96ed23c0",
+      "date": "2024-12-19T15:02:25+01:00",
+      "author": "pblanco"
+     },
+     "bugfix/excluding_bom_from_encoding": {
+      "hash": "9da6252b287a74c0eabdc6bbb833cd7dafa33910",
+      "date": "2025-05-08T10:32:54+02:00",
+      "author": "pblanco"
+     },
+     "bugfix/flyover": {
+      "hash": "b67c82f29e17c91d28dacb20172cbb243528b049",
+      "date": "2024-10-02T16:06:26+02:00",
+      "author": "Pablo Blanco"
+     },
+     "bugfix/routes_and_flyover": {
+      "hash": "a56b545c3acd91827f5a9a2d6b2a5855f783c6d7",
+      "date": "2024-11-26T18:30:30+01:00",
+      "author": "pablo"
+     },
+     "bugs_integracion_jun": {
+      "hash": "0bd9e083d8c61e09d6ba2cc0c9170fddab6fbd02",
+      "date": "2024-06-17T11:48:15+02:00",
+      "author": "Pablo Blanco"
+     },
+     "bwJsLoad": {
+      "hash": "3338f78e4dadb23ef1bdb79b4c110aabbcdd6799",
+      "date": "2024-12-11T13:09:26+01:00",
+      "author": "pblanco"
+     },
+     "bw_api_token": {
+      "hash": "8ce2548e7780ee1f380587d0b79e3ccbb9e9d85f",
+      "date": "2025-02-14T11:02:53+01:00",
+      "author": "Jose M Porto"
+     },
+     "bw_private_mode": {
+      "hash": "d33ddec1e8976f5bdcef6283f29b5776f98acdc6",
+      "date": "2025-04-11T13:44:34+02:00",
+      "author": "Jose M Porto"
+     },
+     "bwidget_search_engine_mobile": {
+      "hash": "4affb0276105501b59135389c4dce8407ace41e5",
+      "date": "2024-04-25T07:56:48+02:00",
+      "author": "Pablo Blanco"
+     },
+     "categoriasAdmin": {
+      "hash": "c82fbd82a3f174012b7a0f36f0155aaf7ee64fee",
+      "date": "2025-08-26T11:08:14+02:00",
+      "author": "pepa"
+     },
+     "categoryLandings": {
+      "hash": "7ff1a56c8c324fe0081bb73f8f46d0e3356123f2",
+      "date": "2025-06-19T15:31:38+02:00",
+      "author": "pepa"
+     },
+     "ci/cd_codugmelo": {
+      "hash": "1060c755bad9a3120043d5bfc1562005d934b327",
+      "date": "2024-07-02T01:18:24+02:00",
+      "author": "pablinho.blanco@gmail.com"
+     },
+     "cluster_tap": {
+      "hash": "6ed58f0b5346fe3067316bf9eaf5a214dfd8a3eb",
+      "date": "2024-02-21T09:52:07+01:00",
+      "author": "Pablo Blanco"
+     },
+     "confAvanzada": {
+      "hash": "917d100f3e574922b46b1bffc37c34c4265138c1",
+      "date": "2026-04-09T17:19:54+02:00",
+      "author": "pepa"
+     },
+     "control_3d_fixes": {
+      "hash": "0748f5deac91a76755a656aa2136356e241a6189",
+      "date": "2024-03-15T07:10:15+01:00",
+      "author": "Pablo Blanco"
+     },
+     "customHeader": {
+      "hash": "c6a2ccfce457bc8c1d237a86ad0e60e87668146e",
+      "date": "2026-02-24T10:10:39+01:00",
+      "author": "pepa"
+     },
+     "db_test_clone": {
+      "hash": "db325041f27d13640fb87d42f62b512aa995fb05",
+      "date": "2024-02-18T22:20:54+01:00",
+      "author": "Pablo Blanco"
+     },
+     "deleting_unused_doc": {
+      "hash": "be1242c78e324fc48e90360ee14302129f188257",
+      "date": "2024-02-08T09:28:20+01:00",
+      "author": "Pablo Blanco"
+     },
+     "embed_js_methods_encapsulated": {
+      "hash": "2c95317ea6ce2cead1aaee3b1d6da53d9b88e387",
+      "date": "2025-01-16T20:52:37+01:00",
+      "author": "pblanco"
+     },
+     "embed_methods_inside": {
+      "hash": "8227d50b3cc0043327b346d11f7b65808fba0262",
+      "date": "2025-12-12T12:49:09+01:00",
+      "author": "Pablo Blanco"
+     },
+     "embed_segment_optimizations": {
+      "hash": "2ba241216df7246d01f86c7938fe95210c6e3ea5",
+      "date": "2024-04-04T21:06:07+02:00",
+      "author": "Pablo Blanco"
+     },
+     "error_500_problemo": {
+      "hash": "4da2e561bd37efb8be06285cca2be66f8171ca69",
+      "date": "2024-04-24T18:06:28+02:00",
+      "author": "Pablo Blanco"
+     },
+     "externalViewer_textarea": {
+      "hash": "45a0fccd6e5259a41fb76384dd34880ac5c61d75",
+      "date": "2024-05-06T11:02:27+02:00",
+      "author": "Pablo Blanco"
+     },
+     "favorites": {
+      "hash": "e6917f66b2eee079a24fca2911fbc48de32eb0be",
+      "date": "2026-03-27T10:07:08+01:00",
+      "author": "pepa"
+     },
+     "favoritosFichasLandings": {
+      "hash": "95cfe6a231eacfe0f05ca760940beeedeb242521",
+      "date": "2026-08-06T16:39:46+02:00",
+      "author": "pepa"
+     },
+     "feature/update-maps3d": {
+      "hash": "4abd13cdd0680dca03dfcf2da2f6c81bc0f9a1b3",
+      "date": "2026-09-07T06:57:40+02:00",
+      "author": "Pablo Blanco"
+     },
+     "filter_combo_select": {
+      "hash": "a221b91c84f6a1f2ba7d9d4395f5b8a01cdc0fe3",
+      "date": "2024-04-20T13:26:00+02:00",
+      "author": "Pablo Blanco"
+     },
+     "filters_and_or_api": {
+      "hash": "ba83cd0a52aa417016550209a1888a58b24fb48d",
+      "date": "2024-07-04T14:13:08+02:00",
+      "author": "Pablo Blanco"
+     },
+     "filtroSecundario": {
+      "hash": "c7ca4d8a428ec0b0904ebc8f4592dcced825eb97",
+      "date": "2025-08-08T17:40:11+02:00",
+      "author": "pepa"
+     },
+     "filtrosAvanzados": {
+      "hash": "def4ddf58540b4b22d20d40df3a954600467b0f1",
+      "date": "2024-08-22T16:58:07+02:00",
+      "author": "pepa"
+     },
+     "final_tour_3d": {
+      "hash": "7a7f5efb6c0b241fbb05e464ca3c3e3f5a4ef0a6",
+      "date": "2024-11-27T10:10:31+01:00",
+      "author": "pablo"
+     },
+     "fix/favorites-url-reads": {
+      "hash": "9e4332c0025e4e605d94e7dfc79b6d78f122c905",
+      "date": "2026-09-25T06:22:25+02:00",
+      "author": "Pablo Blanco"
+     },
+     "fix/ratio_less_1": {
+      "hash": "241132c627c811e2619764f735b05ac4038b0403",
+      "date": "2024-06-05T13:02:48+02:00",
+      "author": "Pablo Blanco"
+     },
+     "fix/route-assistant-permisive-mode": {
+      "hash": "e39ec9d5654e5d4ca2b99a0dc29116dadcbd57c0",
+      "date": "2026-04-16T15:39:29+02:00",
+      "author": "Pablo Blanco"
+     },
+     "fixBugFiltrosPortais": {
+      "hash": "4d5f63b67450bbe1c38b5d13e23c3c799a2934a6",
+      "date": "2026-08-04T17:36:51+02:00",
+      "author": "pepa"
+     },
+     "fix_ia_icon_and_retinadisplayicons": {
+      "hash": "0fe99bd35ea1a09e976d506f206ce33039184898",
+      "date": "2024-04-24T22:20:42+02:00",
+      "author": "Pablo Blanco"
+     },
+     "fix_route_assistant_bugs": {
+      "hash": "70d9242184122edec83e872350000ba62d4e35d2",
+      "date": "2025-05-26T23:08:38+02:00",
+      "author": "pblanco"
+     },
+     "fix_routes_filtering": {
+      "hash": "a21c176ad28e769fee9252a406ca335436c6661a",
+      "date": "2024-03-15T09:05:33+01:00",
+      "author": "Pablo Blanco"
+     },
+     "fix_slider_distancia": {
+      "hash": "deab2c9d512317df0e66e34b25703a35d497eb54",
+      "date": "2024-06-03T20:50:56+02:00",
+      "author": "Pablo Blanco"
+     },
+     "flush_all_on_script": {
+      "hash": "6fd0e376537a1897a81e0b484735e289507692b9",
+      "date": "2024-04-25T08:30:53+02:00",
+      "author": "Pablo Blanco"
+     },
+     "google_fyover_hallenge": {
+      "hash": "aea4392d83d060d43ddfeca86ed5e0b0a027a7b6",
+      "date": "2024-11-26T19:15:35+01:00",
+      "author": "pablo"
+     },
+     "gpt_api_key_on_conf": {
+      "hash": "a20da8cef93078e4d3a660f94f3612fdf3668bd0",
+      "date": "2024-07-04T09:26:58+02:00",
+      "author": "pablinho.blanco@gmail.com"
+     },
+     "health_check_ok": {
+      "hash": "a959c15ba9ef7f479110146ae66ca19aa6056d03",
+      "date": "2024-06-20T13:34:51+02:00",
+      "author": "Pablo Blanco"
+     },
+     "imperialSystemFix": {
+      "hash": "3f5695522a582d83943b806c5c66316b87f653d1",
+      "date": "2026-08-24T08:52:22+00:00",
+      "author": "pepa p. sañudo"
+     },
+     "improve_search": {
+      "hash": "04c3135959d1913052e71cfea7a9f513cd1fd145",
+      "date": "2024-04-24T15:51:37+02:00",
+      "author": "Pablo Blanco"
+     },
+     "infobuble_fixes": {
+      "hash": "f05f2719a0a3e2edfa71f41afcca42e1d9098b48",
+      "date": "2024-02-21T18:23:26+01:00",
+      "author": "Pablo Blanco"
+     },
+     "landingMosaico": {
+      "hash": "5f86a949156fa5617430bf2be1858be628916738",
+      "date": "2026-01-13T16:03:47+01:00",
+      "author": "pepa"
+     },
+     "landingOferta": {
+      "hash": "0fac1a4c39a34524193f685f39038bd231043973",
+      "date": "2025-03-17T19:47:36+01:00",
+      "author": "pepa"
+     },
+     "markers_secundarios_same_size": {
+      "hash": "141909b0b3f7cddccc894c24c630c6d037c0fa6b",
+      "date": "2024-04-15T12:46:02+02:00",
+      "author": "Pablo Blanco"
+     },
+     "master": {
+      "hash": "f2c95dcad5c404d4b51471d8dca2a3866318a257",
+      "date": "2026-10-21T18:09:59+02:00",
+      "author": "Jose M Porto"
+     },
+     "minimizar-ck-session": {
+      "hash": "ad033304e5cfac199fc6ab6d77613a01414cdc1c",
+      "date": "2026-10-19T10:31:29+02:00",
+      "author": "Jose M Porto"
+     },
+     "miniportal_fixes": {
+      "hash": "3868cd86b3bf1db75c773605e46a47986e702a62",
+      "date": "2024-05-07T13:17:50+02:00",
+      "author": "Pablo Blanco"
+     },
+     "multidia_routeplanner": {
+      "hash": "685338bb0b1b08e69271ae84475a68d5314fa2e5",
+      "date": "2024-12-02T00:03:16+01:00",
+      "author": "pablo"
+     },
+     "newLandingTemplate": {
+      "hash": "c60884b4268d7b8d73ef11ef6ae09b0059ab8e43",
+      "date": "2026-07-09T15:40:28+02:00",
+      "author": "pepa"
+     },
+     "newMobile": {
+      "hash": "cc9c55dc8563ba3e725bf87c98561ebd68633fb2",
+      "date": "2026-06-12T12:31:22+02:00",
+      "author": "pepa"
+     },
+     "new_filter_operators_API": {
+      "hash": "b4cb73b49bb4c745b43311ed7980713762f4761c",
+      "date": "2024-07-09T19:19:03+02:00",
+      "author": "Pablo Blanco"
+     },
+     "noscript_embed": {
+      "hash": "e4bc85c7a41a1699e2efe925761b217934d8dc9a",
+      "date": "2025-04-25T19:30:22+02:00",
+      "author": "pblanco"
+     },
+     "openFicha": {
+      "hash": "7767bc96e2b836d718dfa1dedab09ee56fd52b3f",
+      "date": "2026-04-28T17:21:30+02:00",
+      "author": "pepa"
+     },
+     "pinCustomer": {
+      "hash": "2ef8ae3851342e4805aac04d31baac891605b018",
+      "date": "2025-05-30T12:17:02+02:00",
+      "author": "pepa"
+     },
+     "pipeline": {
+      "hash": "a6ea9cbc24ac652778fd6d29ebda92c43bd4ac6c",
+      "date": "2024-07-22T21:33:21+02:00",
+      "author": "Pablo Blanco"
+     },
+     "pipeline_testing": {
+      "hash": "4858a54dd259920c606642f1e10afaba2a169236",
+      "date": "2024-07-11T16:18:16+02:00",
+      "author": "pablinho.blanco@gmail.com"
+     },
+     "placeholder_on_search_combo": {
+      "hash": "0f039f70bca82a48c41d1f77d76665829327c8ab",
+      "date": "2024-04-20T22:29:43+02:00",
+      "author": "Pablo Blanco"
+     },
+     "programative_3d_flyover": {
+      "hash": "806ec21783b879a2bfd2559e2c17cfa7b6774dd6",
+      "date": "2024-10-17T08:39:48+02:00",
+      "author": "Pablo"
+     },
+     "rendimiento-ttlsql": {
+      "hash": "6550fb1dc57b71f2975d96582ae11f79f5bfbba6",
+      "date": "2026-10-19T13:36:01+02:00",
+      "author": "Jose M Porto"
+     },
+     "resCategories": {
+      "hash": "725d777c5966344eed28946c8417ed79ee25a949",
+      "date": "2025-08-29T16:52:40+02:00",
+      "author": "pepa"
+     },
+     "route_color_on_du": {
+      "hash": "1c6bd557099652778d07088e5029df6731832b71",
+      "date": "2024-03-15T09:59:41+01:00",
+      "author": "Pablo Blanco"
+     },
+     "route_planner": {
+      "hash": "5c22a0ef2a50b197129150288918834015b274f6",
+      "date": "2024-11-05T17:50:33+01:00",
+      "author": "pablo"
+     },
+     "route_tap": {
+      "hash": "39fe4809565f2d5423a3bf2f6e73ab6f2d0d4749",
+      "date": "2024-02-22T08:36:49+01:00",
+      "author": "Pablo Blanco"
+     },
+     "separacionFav": {
+      "hash": "ccb748c9ce07a8633bbd58a431f49eec1ec79c77",
+      "date": "2026-10-19T17:08:32+02:00",
+      "author": "Jose M Porto"
+     },
+     "setup_apaches": {
+      "hash": "0caf948bfa22347ad5bf6a818aa65af1c9b3d901",
+      "date": "2025-02-17T15:02:11+01:00",
+      "author": "Jose M Porto"
+     },
+     "shareFavorites": {
+      "hash": "862eb43ece2ead6f1a50295c154f501a85037c0b",
+      "date": "2026-09-17T10:17:11+02:00",
+      "author": "Pablo Blanco"
+     },
+     "sisMarkers": {
+      "hash": "045bc63269e7117bc7e603b6318177c4adab02ba",
+      "date": "2025-09-05T08:21:54+02:00",
+      "author": "pepa"
+     },
+     "test_hello_world": {
+      "hash": "3da14b5da05a3c8c4180f53c69fc85de730f7b87",
+      "date": "2024-02-15T12:08:39+01:00",
+      "author": "Pablo Blanco"
+     },
+     "throwError": {
+      "hash": "d8ffd10212e40e6d3035c67e43d078e488516fbb",
+      "date": "2024-03-11T13:20:00+01:00",
+      "author": "Pablo Blanco"
+     },
+     "videosCurtos": {
+      "hash": "0c73f6f73563a5ed4ab5c25525375aa790ec3a3e",
+      "date": "2026-03-11T12:26:54+01:00",
+      "author": "pepa"
+     },
+     "widgetReservas": {
+      "hash": "c61b389503753636aed8f346dca6635ee9ca7eee",
+      "date": "2026-05-14T09:57:14+02:00",
+      "author": "pepa"
+     }
+    }
+   },
+   "deps": {
+    "cogumelo/composer.json": {
+     "ecosystem": "composer",
+     "packages": {}
+    },
+    "cogumelo/packages/vendorPackages/Gettext/composer.json": {
+     "ecosystem": "composer",
+     "packages": {
+      "gettext/languages": "2.*",
+      "illuminate/view": "* (dev)",
+      "twig/twig": "* (dev)",
+      "twig/extensions": "* (dev)"
+     }
+    },
+    "cogumelo/packages/vendorPackages/jquery-mapael-2.2.0/package.json": {
+     "ecosystem": "npm",
+     "packages": {
+      "jquery": "^3.0 || ^2.0 || ^1.0 (peer)",
+      "raphael": "^2.2.0 || ^2.1.1",
+      "grunt": "^1.0 (dev)",
+      "grunt-contrib-jshint": "^1.1 (dev)",
+      "grunt-contrib-qunit": "^1.2 (dev)",
+      "grunt-contrib-uglify": "^2.0 (dev)"
+     }
+    },
+    "cogumelo/packages/vendorPackages/smarty-gettext/composer.json": {
+     "ecosystem": "composer",
+     "packages": {
+      "azatoth/php-pgettext": "~1.0 (dev)",
+      "smarty/smarty": "3.1.* (dev)"
+     }
+    }
+   },
+   "frameworks": [
+    "jQuery"
+   ],
+   "services": {
+    "sdks": [],
+    "hosts": [
+     "api.openai.com",
+     "api.openweathermap.org",
+     "api.whatsapp.com",
+     "apitools.boldest.io",
+     "app.thebookingbutton.com",
+     "attacomsian.com",
+     "base.bw.boldest.io",
+     "base.bwpre.boldest.io",
+     "bwidget.local.boldest.io",
+     "bwidget.srv",
+     "code.google.com",
+     "code.voidblossom.com",
+     "developers.google.com",
+     "dominio.aaa",
+     "dominio.com",
+     "dygraphs.com",
+     "embed.boldest.io",
+     "faisalman.github.io",
+     "help.launchpad.net",
+     "html.spec.whatwg.org",
+     "jqueryvalidation.org",
+     "maps.googleapis.com",
+     "mattstow.com",
+     "media.webgeozzy",
+     "modernizr.com",
+     "nominatim.openstreetmap.org",
+     "null.null",
+     "openweathermap.org",
+     "oscarotero.com",
+     "pchart.sourceforge.net",
+     "production-backend.navisavitravel.com",
+     "routeplan.boldest.io",
+     "tools.ietf.org",
+     "viajar.elperiodico.com",
+     "www.boldest.io",
+     "www.booking.com",
+     "www.google.com",
+     "www.google.es",
+     "www.googleapis.com",
+     "www.googletagmanager.com",
+     "www.netubi.com",
+     "www.ruralgest.net",
+     "www.smarty.net",
+     "www.test.com",
+     "www.vincentbroute.fr"
+    ],
+    "images": [
+     "mariadb",
+     "redis"
+    ]
+   },
+   "signals": {
+    "files": 2336,
+    "code_files": 718,
+    "test_files": 6,
+    "ai_tooling": [
+     ".claude/hooks/block-git-writes.sh",
+     ".claude/settings.json",
+     ".claude/skills/ai-doc/SKILL.md",
+     ".claude/statusline-command.sh",
+     "CLAUDE.md"
+    ],
+    "quality": [
+     "cogumelo/packages/vendorPackages/jquery-mapael-2.2.0/.editorconfig",
+     "cogumelo/packages/vendorPackages/smarty-gettext/phpunit.xml"
+    ],
+    "ci": [
+     "cogumelo/packages/vendorPackages/Gettext/.travis.yml",
+     "cogumelo/packages/vendorPackages/jquery-mapael-2.2.0/.travis.yml"
+    ],
+    "containers": [
+     "bitbucket-pipelines-files/docker-compose.yml"
+    ],
+    "iac": [],
+    "docblocks": 1821,
+    "typed_docblocks": 1993
+   },
+   "config": {
+    "base/httpdocs/.htaccess": "1d703383d72d472d05981e28d02cb0c6cb9989f2",
+    "bitbucket-pipelines-files/docker-compose.yml": "4b04965bb15b66b4293e28b716baf556fc24050c",
+    "cogumelo/packages/vendorPackages/Gettext/.travis.yml": "bfa07a599bf863c445e6961e4d5a7e0864faf704",
+    "cogumelo/packages/vendorPackages/jquery-mapael-2.2.0/.travis.yml": "fe4b278d1612336e6113bde89eeb254b0f0019af"
+   },
+   "base_images": []
+  }
+ },
+ "projects": {
+  "DEP": {
+   "name": "deprecated",
+   "created_on": "2026-06-11T20:24:38.063324+00:00",
+   "is_private": true
+  },
+  "BOL2": {
+   "name": "boldest-frontend",
+   "created_on": "2026-04-14T10:35:41.889974+00:00",
+   "is_private": true
+  },
+  "BOL": {
+   "name": "boldest",
+   "created_on": "2024-07-10T17:24:57.328571+00:00",
+   "is_private": false
+  },
+  "BWID": {
+   "name": "bwidget",
+   "created_on": "2024-02-05T12:24:50.457821+00:00",
+   "is_private": false
+  }
+ },
+ "members": {
+  "{4cfb3b34-9ff8-495a-97f4-a39d7f7c8d72}": {
+   "name": "Jose M. Porto",
+   "nickname": "jmporto"
+  },
+  "{7c5f7c06-a93d-4ef6-a6ba-6db338f3e686}": {
+   "name": "pepa p. sañudo",
+   "nickname": "pepinha"
+  },
+  "{8dfc3ac7-d3d9-4456-aa3e-2d0ffe42c99f}": {
+   "name": "Pablo Blanco",
+   "nickname": "pablinhob"
+  },
+  "{7aadc3c1-3e54-43fa-85a5-3f2671d4cbb6}": {
+   "name": "manueljpy",
+   "nickname": "manueljpy"
+  },
+  "{7ec812e8-1ba0-4205-b05c-da42d43ee7fb}": {
+   "name": "Bold digital comms",
+   "nickname": "Bold digital comms"
+  },
+  "{8b44422b-76dc-48d9-884f-eecb608a7a96}": {
+   "name": "Simón Neira",
+   "nickname": "Simón Neira"
+  },
+  "{e23c5f51-42a0-4844-90bf-03b7134d04a3}": {
+   "name": "Pablo Parapar",
+   "nickname": "Pablo Parapar"
+  },
+  "{f6b02df8-b1b5-416f-9744-bdf06043fb20}": {
+   "name": "Pablo Valcarce Lence",
+   "nickname": "Pablo Valcarce Lence"
+  }
+ },
+ "errors": [],
+ "inventory": {
+  "{40f35776-7840-487a-82c5-d7029e6e29ca}": "mcp-bw",
+  "{55461235-ed2c-45bb-98d4-422ebe162945}": "frontend-admin-mapcraft",
+  "{46e9b5a0-4102-433c-b2ba-54f164dc9dc9}": "frontend-admin-analytics",
+  "{e072c8f3-54c7-4843-8a26-8cf3adf23bf2}": "frontend-admin-foundation",
+  "{35f58a99-8eab-4053-9c54-8695427f5e0f}": "frontend-admin",
+  "{777ad410-fe00-40d2-aab1-f11186919d16}": "frontend-public-favorites-and-planner",
+  "{e762bb91-d0a4-4a6d-a5ce-b8ae6e39025d}": "frontend-public-bw-map",
+  "{2ebbe8e6-c344-4fc4-b160-f0c201a95cae}": "frontend-public-sections",
+  "{d6b0b4b5-ff0d-41b3-b3dc-f1fa9ccbfc5b}": "frontend-public",
+  "{a090a86d-a915-40c6-b484-206a34b05f4f}": "observer-bw",
+  "{42009ffc-d9d8-48dd-9820-180b1cf51c7d}": "boldest-frontend-embed",
+  "{2e56583c-2902-4f7f-a90d-c59cdd22dd69}": "observer-api",
+  "{1853359c-4c68-4766-91e6-a1bcd0ddfcbe}": "analytics-frontend",
+  "{66e48f8b-5970-4b04-937e-76b2de43a049}": "observer",
+  "{7587e379-072a-4b1a-98e6-f80ff9f657ba}": "boldest-map-assistant",
+  "{8387f2b3-0d9f-4ff9-b001-9012d1b4185d}": "bfiles",
+  "{bfba9f60-5467-4912-9aa8-afe625561914}": "boldest-devel",
+  "{18ca06a0-9442-433f-906c-14fa8d153b36}": "boldest-admin.old",
+  "{a4309976-b8ee-494d-a43c-1f09a64af90d}": "boldest-lib",
+  "{ea21a2f2-a768-49cb-bdd5-9d56d6bc5e40}": "webtools",
+  "{ebc31aa7-f1aa-469b-83df-e40a3dc2efc9}": "boldest-backend",
+  "{d587cc59-0814-48da-a0c4-7ff63b253d26}": "boldest-routeplanner",
+  "{c141f0c9-bd77-48c0-b980-02b80ed1f6f3}": "boldest-backofice",
+  "{b95c8f24-1425-44e9-975b-ee054e2a6de8}": "boldest-frontend.deprecated",
+  "{4c7ba3fd-3116-4645-9ab6-58ce031d3b00}": "boldest-backend.orig_old",
+  "{6562df45-c13a-4be3-91ea-9bedbfd296cb}": "bw-docker",
+  "{2b76bef9-9888-400d-93b7-18d6bbc3ac4f}": "bw-pdf-server",
+  "{f0a9747e-95c9-46a9-867f-a762c5744b4a}": "bw-docs",
+  "{8e6183b9-54dc-4517-95d5-150c5f66db9a}": "autocontent",
+  "{30802b92-c95c-43a7-95b8-7717d722771c}": "bwidget",
+  "{09ff43b0-740e-4a25-9abf-34c34360adad}": "bwprojects",
+  "{c4a07927-c9ee-4b4a-9df7-779226bd8b33}": "bw-docs_old"
+ }
+}

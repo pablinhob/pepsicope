@@ -53,6 +53,36 @@ Para una primera prueba rápida:
   con `read:workspace:bitbucket`, `read:project:bitbucket`, `read:repository:bitbucket` y `read:user:bitbucket`,
   y rellena `BITBUCKET_EMAIL` y `BITBUCKET_API_TOKEN`.
 
+#### Scopes del token
+
+Esos cuatro scopes bastan para lo que hace Periscope hoy. El token del equipo tiene además
+otros scopes de solo lectura. Aquí se listan todos, con lo que se usa y lo que podría
+aprovecharse en funcionalidades futuras, cada una con su `FEATURE_*`.
+
+| Scope | Uso actual | Posible uso futuro |
+|---|---|---|
+| `read:workspace:bitbucket` | Workspace y miembros | — |
+| `read:project:bitbucket` | Proyectos | — |
+| `read:repository:bitbucket` | Repos y metadatos | Ramas y restricciones de rama |
+| `read:user:bitbucket` | Usuario actual (`doctor`) | — |
+| `read:account` | — | Perfil de la cuenta Atlassian (nombre y email de autores) |
+| `read:pullrequest:bitbucket` | — | PRs abiertas y fusionadas, revisores, tiempo hasta merge (prácticas de revisión) |
+| `read:pipeline:bitbucket` | — | Ejecuciones de pipelines, tasa de fallo, repos que adoptan CI, deployments |
+| `read:runner:bitbucket` | — | Runners self-hosted nuevos (infraestructura propia) |
+| `read:permission:bitbucket` | — | Cambios de permisos: quién gana acceso o pasa a admin (seguridad) |
+| `read:webhook:bitbucket` | — | Webhooks nuevos hacia servicios externos (integraciones ocultas) |
+| `read:issue:bitbucket` | — | Uso del issue tracker de cada repo |
+| `read:wiki:bitbucket` | — | Wikis nuevas o con cambios (documentación) |
+| `read:snippet:bitbucket` | — | Snippets del workspace: código fuera de los repos y posibles secretos expuestos |
+| `read:package:bitbucket` | — | Paquetes publicados en el registro de Bitbucket |
+| `read:agent-session:bitbucket` | — | Sesiones de agentes de IA en Bitbucket (adopción de IA) |
+| `read:user-orgs` | — | Organización Atlassian a la que pertenece el usuario |
+| `read:user-org-units` | — | Unidades organizativas (equipos) de la organización |
+| `read:user-org-unit-apps` | — | Apps instaladas por unidad organizativa |
+
+Todo es de solo lectura. Aunque el token pudiera escribir, Periscope no escribe nunca en
+Bitbucket.
+
 ### Claude
 
 No hace falta ninguna clave ni créditos de API. Periscope llama al Claude Code instalado
