@@ -38,7 +38,8 @@ _ALERT_TITLES = {
     "caution": "Cuidado",
 }
 _LEGACY_BASELINE = "**Primer informe (línea base).**"
-_LEAD_REPO = re.compile(rf"^(?:`({_SLUG})`|\*\*({_SLUG})\*\*):")
+# «`repo`:» o «**repo**:», con las fechas opcionales delante de los dos puntos
+_LEAD_REPO = re.compile(rf"^(?:`({_SLUG})`|\*\*({_SLUG})\*\*)(?: _\([^)]*\)_)?:")
 _CELL_REPO = re.compile(rf"^(?:\[({_SLUG})\]\(|`({_SLUG})`)")
 _DETAILS_OPEN = re.compile(r"^<details><summary>(.*)</summary>$")
 _TABLE_SEP = re.compile(r"^\|(\s*:?-+:?\s*\|)+$")

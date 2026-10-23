@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from typing import Any
 
 from periscope.config import Config
@@ -44,10 +45,62 @@ def baseline_notice(repos: int) -> list[str]:
     ]
 
 
+def _day(iso: str | None) -> str:
+    return _d(iso)[:10]
+
+
+def _repo_spans(changes: dict) -> dict[str, tuple[str, str]]:
+    """Primera y última fecha de cada repo: su historia en la línea base, sus commits del
+    periodo en un informe de cambios. Son datos de git, nunca de la IA."""
+    spans = {}
+    for r in changes.get("new_repos") or []:
+        first = (r.get("first_commit") or {}).get("date")
+        last = (r.get("last_commit") or {}).get("date")
+        if first and last:
+            spans[r["slug"]] = (_day(first), _day(last))
+    for r in changes.get("repo_changes") or []:
+        days = sorted(_day(c["date"]) for c in r.get("commits") or [] if c.get("date"))
+        if days:
+            spans[r["slug"]] = (days[0], days[-1])
+    return spans
+
+
 class Report:
     def __init__(self, cfg: Config, changes: dict, stats: dict):
         self.cfg, self.c, self.stats = cfg, changes, stats
         self.lines: list[str] = []
+        self.spans = _repo_spans(changes)
+
+    # --- fechas -------------------------------------------------------------
+    def _span(self, slugs: list[str]) -> str:
+        """«cambios del X al Y» de un conjunto de repos ('' si no hay fechas)."""
+        found = [self.spans[s] for s in slugs if s in self.spans]
+        if not found:
+            return ""
+        first, last = min(f for f, _ in found), max(t for _, t in found)
+        label = "actividad" if self.c["baseline"] else "cambios"
+        return f"{label} el {first}" if first == last else f"{label} del {first} al {last}"
+
+    def _when(self, slug: str) -> str:
+        """Sufijo con las fechas de un repo, para notas que no traen fecha propia."""
+        span = self._span([slug])
+        return f" _({span})_" if span else ""
+
+    def _dated(self, text: str) -> str:
+        """Añade las fechas de los repos que cita un texto entre comillas invertidas."""
+        span = self._span(re.findall(r"`([^`]+)`", text))
+        return f"{text} · _{span}_" if span else text
+
+    def _period(self) -> str:
+        c = self.c
+        if not c["baseline"]:
+            return f"Cambios entre el {_d(c['since'])} y el {_d(c['until'])}."
+        spans = self.spans.values()
+        text = f"Estado del workspace el {_d(c['until'])}."
+        if spans:
+            first, last = min(f for f, _ in spans), max(t for _, t in spans)
+            text += f" Historia de los repos analizados: del {first} al {last}."
+        return text
 
     def w(self, *lines: str) -> None:
         self.lines.extend(lines)
@@ -97,6 +150,10 @@ class Report:
         rows = [("Repositorios en el workspace", c["repo_total"])]
         if c["baseline"]:
             rows.append(("Repositorios analizados", len(c["new_repos"])))
+            if self.spans:
+                first = min(f for f, _ in self.spans.values())
+                last = max(t for _, t in self.spans.values())
+                rows.append(("Historia analizada", f"{first} → {last}"))
         else:
             rows += [
                 ("Repositorios nuevos", len(c["new_repos"])),
@@ -121,7 +178,7 @@ class Report:
         wc = self.c.get("workspace_changes") or {}
         if not any(wc.values()):
             return
-        self.w("## Workspace", "")
+        self.w("## Workspace", "", f"_{self._period()}_", "")
         labels = {
             "projects_added": "Proyectos nuevos",
             "projects_removed": "Proyectos eliminados",
@@ -277,7 +334,7 @@ class Report:
         items = self.c["metadata_changes"]
         if not items:
             return
-        self.w("## Cambios en repositorios (metadatos)", "")
+        self.w("## Cambios en repositorios (metadatos)", "", f"_{self._period()}_", "")
         for it in items:
             for label, old, new in it["changes"]:
                 warn = " ⚠️" if label == "privado" and new is False else ""
@@ -292,13 +349,17 @@ class Report:
         if not repos:
             self.w("_Sin actividad en el periodo._", "")
             return
-        self.w("| Repo | Commits | Autores | Ramas nuevas |", "|---|---:|---|---:|")
+        self.w(
+            "| Repo | Commits | Primer cambio | Último cambio | Autores | Ramas nuevas |",
+            "|---|---:|---|---|---|---:|",
+        )
         for r in repos:
             authors = ", ".join(
                 f"{a} ({n})" for a, n in sorted(r["authors"].items(), key=lambda x: -x[1])
             )
+            first, last = self.spans.get(r["slug"], ("—", "—"))
             self.w(
-                f"| {_repo_link(r)} | {r['commit_count']} | {_esc(authors)} | "
+                f"| {_repo_link(r)} | {r['commit_count']} | {first} | {last} | {_esc(authors)} | "
                 f"{len(r.get('branches_added', []))} |"
             )
         self.w("")
@@ -306,7 +367,7 @@ class Report:
             summary = (r.get("ai") or {}).get("summary")
             if summary or r.get("history_rewritten") or r.get("error"):
                 self.w(
-                    f"- **{r['slug']}**: {summary or ''}"
+                    f"- **{r['slug']}**{self._when(r['slug'])}: {summary or ''}"
                     + (
                         " ⚠️ _historia reescrita (force-push o cambio de rama principal)_"
                         if r.get("history_rewritten")
@@ -367,39 +428,46 @@ class Report:
     def _frameworks(self) -> None:
         lines = []
         for r in self.c["repo_changes"]:
+            when = self._when(r["slug"])
             if r.get("frameworks_added"):
-                lines.append(f"- `{r['slug']}`: **añade** {', '.join(r['frameworks_added'])}")
+                lines.append(
+                    f"- `{r['slug']}`: **añade** {', '.join(r['frameworks_added'])}{when}"
+                )
             if r.get("frameworks_removed"):
                 lines.append(
-                    f"- `{r['slug']}`: **deja de usar** {', '.join(r['frameworks_removed'])}"
+                    f"- `{r['slug']}`: **deja de usar** {', '.join(r['frameworks_removed'])}{when}"
                 )
             for note in (r.get("ai") or {}).get("framework_notes", []):
-                lines.append(f"- `{r['slug']}`: {note}")
+                lines.append(f"- `{r['slug']}`: {note}{when}")
         self._section("Frameworks y sub-frameworks", lines)
 
     def _services(self) -> None:
         lines = []
         for r in self.c["repo_changes"]:
+            when = self._when(r["slug"])
             if r.get("sdks_added"):
-                lines.append(f"- `{r['slug']}`: nuevos SDK de **{', '.join(r['sdks_added'])}**")
+                lines.append(
+                    f"- `{r['slug']}`: nuevos SDK de **{', '.join(r['sdks_added'])}**{when}"
+                )
             if r.get("sdks_removed"):
                 lines.append(
-                    f"- `{r['slug']}`: deja de usar SDK de {', '.join(r['sdks_removed'])}"
+                    f"- `{r['slug']}`: deja de usar SDK de {', '.join(r['sdks_removed'])}{when}"
                 )
             if r.get("images_added"):
                 lines.append(
                     f"- `{r['slug']}`: nuevos servicios en docker-compose: "
-                    f"{', '.join(r['images_added'])}"
+                    f"{', '.join(r['images_added'])}{when}"
                 )
             if r.get("hosts_added"):
                 hosts = r["hosts_added"]
                 lines.append(
                     f"- `{r['slug']}`: nuevos hosts en el código: {', '.join(hosts[:25])}"
                     + (f" (+{len(hosts) - 25})" if len(hosts) > 25 else "")
+                    + when
                 )
             for s in (r.get("ai") or {}).get("external_services", []):
                 lines.append(
-                    f"- `{r['slug']}`: **{s['service']}** ({s['kind']}) — {s['intent']}"
+                    f"- `{r['slug']}`: **{s['service']}** ({s['kind']}) — {s['intent']}{when}"
                     + (f" _Evidencia: {s['evidence']}_" if s.get("evidence") else "")
                 )
         self._section("Servicios externos", lines)
@@ -411,7 +479,8 @@ class Report:
                 tag = " **[posible funcionalidad oculta]**" if f.get("hidden") else ""
                 who = f" — {', '.join(f['authors'])}" if f.get("authors") else ""
                 lines.append(
-                    f"- `{r['slug']}`: **{f['title']}**{tag}{who}. {f['description']}"
+                    f"- `{r['slug']}`: **{f['title']}**{tag}{who}{self._when(r['slug'])}. "
+                    f"{f['description']}"
                     + (f" _Evidencia: {f['evidence']}_" if f.get("evidence") else "")
                 )
         if self.cfg.on("BRANCHES"):
@@ -436,7 +505,10 @@ class Report:
                 by = f" ({_commit_link(r.get('html_url'), p['by'])})" if p.get("by") else ""
                 lines.append(f"- `{r['slug']}`: {p['text']}{by}")
             for p in (r.get("ai") or {}).get("practice_changes", []):
-                lines.append(f"- `{r['slug']}`: **{p['title']}** — {p['description']}")
+                lines.append(
+                    f"- `{r['slug']}`: **{p['title']}**{self._when(r['slug'])} — "
+                    f"{p['description']}"
+                )
         self._section("Forma de trabajar", lines)
 
     def _infra(self) -> None:
@@ -458,7 +530,10 @@ class Report:
                     + (f" — último cambio: {who}" if who else "")
                 )
             for p in (r.get("ai") or {}).get("infra_config_changes", []):
-                lines.append(f"- `{r['slug']}`: **{p['title']}** — {p['description']}")
+                lines.append(
+                    f"- `{r['slug']}`: **{p['title']}**{self._when(r['slug'])} — "
+                    f"{p['description']}"
+                )
         self._section("Configuración y pipelines", lines)
 
     def _summary(self) -> None:
@@ -470,10 +545,15 @@ class Report:
         ]
         if not s and not attention:
             return
-        self.w("## Resumen final", "")
+        self.w("## Resumen final", "", f"_{self._period()}_", "")
         if s:
             if s.get("highlights"):
-                self.w("### Lo más importante", "", *[f"- {h}" for h in s["highlights"]], "")
+                self.w(
+                    "### Lo más importante",
+                    "",
+                    *[f"- {self._dated(h)}" for h in s["highlights"]],
+                    "",
+                )
             for key, title in (
                 ("ways_of_working", "Cambios en la forma de trabajar"),
                 ("infrastructure", "Infraestructura, virtualización y configuración"),
@@ -481,13 +561,20 @@ class Report:
                 if s.get(key):
                     self.w(f"### {title}", "")
                     for item in s[key]:
-                        repos = f" _({', '.join(item['repos'])})_" if item.get("repos") else ""
-                        self.w(f"- **{item['title']}**: {item['description']}{repos}")
+                        self.w(f"- **{item['title']}**: {item['description']}{self._repos(item)}")
                     self.w("")
             # El resumen global ya integra lo que cada repo marcó como «a revisar»
             attention = list(s.get("attention") or []) or attention
         if attention:
-            self.w("### Para revisar", "", *[f"- {a}" for a in attention], "")
+            self.w("### Para revisar", "", *[f"- {self._dated(a)}" for a in attention], "")
+
+    def _repos(self, item: dict) -> str:
+        """Repos de un punto del resumen y las fechas de sus cambios."""
+        repos = item.get("repos") or []
+        if not repos:
+            return ""
+        span = self._span(repos)
+        return f" _({', '.join(repos)})_" + (f" · _{span}_" if span else "")
 
     def _appendix(self) -> None:
         st = self.stats
