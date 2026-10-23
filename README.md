@@ -15,7 +15,7 @@ Junto a cada informe se genera su versión HTML con el mismo nombre y `.html` al
 (`…_linea-base.md.html`). Es un único fichero que se abre en cualquier navegador sin conexión:
 no carga nada de fuera. Permite filtrar por repositorio, proyecto y lenguaje, buscar texto y
 ver solo los avisos ⚠️, y guarda los filtros en la URL (`#repo=bwidget`). Para generar el HTML
-de informes que ya existen: `./periscope.sh html` (todos) o `./periscope.sh html reports/x.md`.
+de informes que ya existen: `./workspace-periscope.sh html` (todos) o `./workspace-periscope.sh html reports/x.md`.
 
 ## Requisitos
 
@@ -26,26 +26,26 @@ Funciona en **macOS** y **Linux** (probado en macOS y en Debian). Hace falta:
 - Una clave SSH con acceso a Bitbucket (`ssh -T git@bitbucket.org` debe decir "authenticated").
 - [Claude Code](https://claude.com/claude-code) instalado y con la sesión iniciada, para la parte de IA.
 
-Python y uv no hace falta instalarlos: `./periscope.sh setup` instala uv (con Homebrew si está
+Python y uv no hace falta instalarlos: `./workspace-periscope.sh setup` instala uv (con Homebrew si está
 disponible y, si no, con el instalador oficial) y uv descarga Python 3.15.
 
 ## Puesta en marcha
 
-`./periscope` y `./periscope.sh` son lo mismo (el primero es un enlace al segundo).
+`./workspace-periscope` y `./workspace-periscope.sh` son lo mismo (el primero es un enlace al segundo).
 
 ```bash
-./periscope.sh setup      # instala uv + Python 3.15, crea .venv, instala dependencias y crea .env
+./workspace-periscope.sh setup      # instala uv + Python 3.15, crea .venv, instala dependencias y crea .env
 # edita .env: workspace, credenciales de Bitbucket y funcionalidades
-./periscope.sh doctor     # comprueba .env, git, SSH, Claude Code y la API de Bitbucket
-./periscope.sh doctor --ai   # además hace una llamada de prueba a Claude
-./periscope.sh run        # genera el informe
+./workspace-periscope.sh doctor     # comprueba .env, git, SSH, Claude Code y la API de Bitbucket
+./workspace-periscope.sh doctor --ai   # además hace una llamada de prueba a Claude
+./workspace-periscope.sh run        # genera el informe
 ```
 
 Para una primera prueba rápida:
 
 ```bash
-./periscope.sh run --max-repos 3 --no-save      # 3 repos, sin guardar estado
-./periscope.sh run --repo '^api-' --no-ai       # solo repos que empiezan por api-, sin IA
+./workspace-periscope.sh run --max-repos 3 --no-save      # 3 repos, sin guardar estado
+./workspace-periscope.sh run --repo '^api-' --no-ai       # solo repos que empiezan por api-, sin IA
 ```
 
 ### Acceso a Bitbucket
@@ -120,7 +120,7 @@ los mismos datos, no se vuelve a consumir.
 | `FEATURE_AI_SUMMARY` | IA: resumen final |
 | `FEATURE_AUDIT_LOG` | Quién creó o borró repos, según el audit log de Atlassian (requiere Atlassian Guard y clave de admin) |
 
-Para desactivar algo puntualmente sin tocar `.env`: `FEATURE_AI_SUMMARY=0 ./periscope.sh run`.
+Para desactivar algo puntualmente sin tocar `.env`: `FEATURE_AI_SUMMARY=0 ./workspace-periscope.sh run`.
 
 Para controlar el coste del primer informe tienes `AI_MAX_CALLS`, `MAX_REPOS`, `REPO_INCLUDE` y `REPO_EXCLUDE`.
 
@@ -136,13 +136,13 @@ Para controlar el coste del primer informe tienes `AI_MAX_CALLS`, `MAX_REPOS`, `
 ## Gestión del entorno
 
 ```bash
-./periscope.sh help
+./workspace-periscope.sh help
 ```
 
 | Comando | Para qué |
 |---|---|
 | `setup` | Instala todo desde cero |
-| `./dev-start-env.sh` / `./dev-stop-env.sh` | Arranca / para el entorno (también `./periscope.sh start` / `stop`) |
+| `./dev-start-env.sh` / `./dev-stop-env.sh` | Arranca / para el entorno (también `./workspace-periscope.sh start` / `stop`) |
 | `status` | Estado del entorno, snapshots, informes y cachés |
 | `doctor [--ai]` | Diagnóstico de configuración y conexión |
 | `reset` | Reinstala `.venv` desde cero (sin tocar datos) |
@@ -169,7 +169,7 @@ Estilo de código (PEP 8), con scripts propios:
 ## Estructura
 
 ```
-periscope.sh            gestor del entorno y la app
+workspace-periscope.sh  gestor del entorno y la app
 dev-start-env.sh        arranca el entorno
 dev-stop-env.sh         para el entorno
 dev-style-check.sh      comprueba el estilo (Black + Ruff), sin tocar nada
@@ -198,7 +198,7 @@ reports/                AAAA-MM-DD_HH-MM-SS_<workspace>_<linea-base|cambios>.md 
 Con cron, por ejemplo de lunes a viernes a las 7:00:
 
 ```cron
-0 7 * * 1-5 cd /ruta/a/boldest-periscope && ./periscope.sh run >> data/cron.log 2>&1
+0 7 * * 1-5 cd /ruta/a/boldest-periscope && ./workspace-periscope.sh run >> data/cron.log 2>&1
 ```
 
 El usuario que ejecuta el cron debe tener iniciada la sesión de Claude Code y acceso SSH sin passphrase interactiva.

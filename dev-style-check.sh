@@ -13,7 +13,7 @@ cd "$ROOT"
 BIN="$ROOT/.venv/bin"
 TARGETS=(src tests)
 
-[[ -x "$BIN/black" && -x "$BIN/ruff" ]] || { echo "Falta el entorno. Ejecuta: ./periscope.sh setup"; exit 1; }
+[[ -x "$BIN/black" && -x "$BIN/ruff" ]] || { echo "Falta el entorno. Ejecuta: ./workspace-periscope.sh setup"; exit 1; }
 
 rc=0
 echo "▸ Black (formato)"

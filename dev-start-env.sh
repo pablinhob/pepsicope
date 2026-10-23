@@ -12,7 +12,7 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VENV="$ROOT/.venv"
 
 if [[ ! -f "$VENV/bin/activate" ]]; then
-  echo "✘ El entorno no existe. Ejecuta: ./periscope.sh setup"
+  echo "✘ El entorno no existe. Ejecuta: ./workspace-periscope.sh setup"
   exit 1
 fi
 if [[ "${VIRTUAL_ENV:-}" == "$VENV" ]]; then

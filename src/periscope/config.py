@@ -122,7 +122,7 @@ def load_config(env_file: Path | None = None) -> Config:
     if env_file.exists():
         values.update(dotenv_values(env_file))
     # Un FEATURE_* exportado en la shell gana al .env (útil para pruebas puntuales:
-    # FEATURE_AI_SUMMARY=0 ./periscope.sh run)
+    # FEATURE_AI_SUMMARY=0 ./workspace-periscope.sh run)
     for name in FEATURES:
         key = f"FEATURE_{name}"
         if key in os.environ:

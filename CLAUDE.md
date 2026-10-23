@@ -39,20 +39,20 @@ infraestructura y configuración. Ver [README.md](README.md).
 
 ## Comandos
 
-Todo pasa por `./periscope.sh` (usa `uv` por debajo). No usar `pip`, `python -m venv` ni
+Todo pasa por `./workspace-periscope.sh` (usa `uv` por debajo). No usar `pip`, `python -m venv` ni
 `requirements.txt` a mano.
 
 | Tarea | Comando |
 |---|---|
-| Instalar entorno | `./periscope.sh setup` |
-| Añadir / quitar dependencia | `./periscope.sh add <pkg>` · `add --dev <pkg>` · `remove <pkg>` |
+| Instalar entorno | `./workspace-periscope.sh setup` |
+| Añadir / quitar dependencia | `./workspace-periscope.sh add <pkg>` · `add --dev <pkg>` · `remove <pkg>` |
 | Comprobar estilo (sin tocar nada) | `./dev-style-check.sh` |
 | Corregir estilo | `./dev-style-fix.sh` |
-| Tests | `./periscope.sh test` |
-| Probar sin tocar estado | `./periscope.sh run --max-repos 3 --no-save` (añade `--no-ai` para no consumir) |
+| Tests | `./workspace-periscope.sh test` |
+| Probar sin tocar estado | `./workspace-periscope.sh run --max-repos 3 --no-save` (añade `--no-ai` para no consumir) |
 
 **Antes de dar una tarea por terminada**, ejecuta `./dev-style-fix.sh` y luego `./dev-style-check.sh` y
-`./periscope.sh test`: los dos últimos deben pasar sin errores. Lo mismo tras escribir código a mano. Si algo falla, se arregla; no se entrega en rojo.
+`./workspace-periscope.sh test`: los dos últimos deben pasar sin errores. Lo mismo tras escribir código a mano. Si algo falla, se arregla; no se entrega en rojo.
 
 ## Estilo de código: PEP 8 obligatorio
 
